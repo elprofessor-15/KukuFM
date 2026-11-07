@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KukuFM PromoFinder</title>
+  <style>
+    :root { color-scheme: dark; --bg:#09090b; --panel:#17171c; --line:#2a2a33; --pink:#ff5d8f; --yellow:#ffd166; }
+    * { box-sizing:border-box; } body { margin:0; font-family:Inter,ui-sans-serif,system-ui,sans-serif; background:radial-gradient(circle at 75% 0,#321126 0,transparent 32%),var(--bg); color:#f7f7fa; }
+    header { max-width:1180px; margin:auto; padding:28px 24px; display:flex; align-items:center; justify-content:space-between; }
+    .brand { font-weight:800; letter-spacing:-.03em; font-size:22px; } .brand span { color:var(--pink); }
+    main { max-width:1180px; margin:auto; padding:44px 24px 80px; }
+    .hero { display:grid; grid-template-columns:1.15fr .85fr; gap:54px; align-items:center; }
+    h1 { font-size:clamp(48px,7vw,88px); line-height:.92; letter-spacing:-.06em; margin:0 0 24px; }
+    h1 em { color:var(--pink); font-style:normal; } .lead { color:#aaaab4; font-size:19px; line-height:1.65; max-width:620px; }
+    .card { background:rgba(23,23,28,.94); border:1px solid var(--line); border-radius:24px; padding:26px; box-shadow:0 24px 80px rgba(0,0,0,.35); }
+    label { display:block; font-size:13px; color:#bdbdc8; margin-bottom:10px; }
+    input[type=file] { width:100%; color:#aaa; padding:18px; border:1px dashed #555568; border-radius:14px; background:#111116; }
+    .mode { margin:18px 0 20px; display:flex; gap:10px; align-items:center; color:#d9d9e2; }
+    button { width:100%; border:0; border-radius:12px; background:var(--pink); color:#fff; font-weight:800; font-size:16px; padding:16px; cursor:pointer; }
+    button:disabled { opacity:.6; cursor:wait; } #status { min-height:24px; margin-top:16px; color:#bdbdc8; line-height:1.45; }
+    #results { display:grid; gap:14px; margin-top:28px; } .promo { border:1px solid var(--line); border-radius:16px; padding:18px; background:#121217; }
+    .promo-top { display:flex; justify-content:space-between; gap:12px; color:#aaaab4; font-size:13px; }
+    .score { color:var(--yellow); font-weight:800; } .promo h3 { margin:12px 0 5px; font-size:20px; }
+    .promo p { color:#aaaab4; margin:6px 0; } .metric { display:inline-block; margin-right:18px; }
+    @media(max-width:800px) { .hero { grid-template-columns:1fr; } h1 { font-size:58px; } header { padding-top:20px; } }
+  </style>
+</head>
+<body>
+  <header><div class="brand">Kuku<span>FM</span> PromoFinder</div><div>Audio intelligence</div></header>
+  <main>
+    <section class="hero">
+      <div><h1>Turn episodes into <em>must-watch</em> moments.</h1><p class="lead">Upload a ZIP of screenplay episode files. KukuFM identifies the strongest hooks, checks continuity, ranks promo windows, and prepares polished campaign candidates.</p></div>
+      <div class="card">
+        <label for="episodeZip">Episode screenplay ZIP</label>
+        <input id="episodeZip" type="file" accept=".zip">
+        <div class="mode"><input id="heuristics" type="checkbox"> <label for="heuristics" style="margin:0">Fast offline analysis</label></div>
+        <button id="run">Analyze episodes</button>
+        <div id="status" aria-live="polite"></div>
+      </div>
+    </section>
+    <section id="results"></section>
+  </main>
+  <script>
+    const input = document.querySelector('#episodeZip');
+    const button = document.querySelector('#run');
+    const status = document.querySelector('#status');
+    const results = document.querySelector('#results');
+    button.addEventListener('click', async () => {
+      if (!input.files.length) { status.textContent = 'Choose an episode ZIP first.'; return; }
+      button.disabled = true;
+      status.textContent = 'Analyzing episodes. This can take several minutes...';
+      results.innerHTML = '';
+      const form = new FormData();
+      form.append('file', input.files[0]);
+      try {
+        const response = await fetch(`/api/run?heuristics_only=${document.querySelector('#heuristics').checked}`, { method:'POST', body:form });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Analysis failed.');
+        const report = data.report || {};
+        status.textContent = `${data.episodes_parsed || 0} episodes parsed · ${data.promos.length} promos ranked · ${Math.round(report.runtime_seconds || 0)}s`;
+        data.promos.forEach((promo, index) => {
+          const episode = promo.segments[0].episode;
+          const hook = promo.hook_line || promo.features?.hook_line || 'No hook line available';
+          const cliff = promo.cliffhanger_line || promo.features?.cliffhanger_line || '';
+          const card = document.createElement('article');
+          card.className = 'promo';
+          card.innerHTML = `<div class="promo-top"><span>#${index + 1} · Episode ${episode}</span><span class="score">${Number(promo.score).toFixed(1)} / 10</span></div><h3>${escapeHtml(hook)}</h3><p>${escapeHtml(cliff)}</p>`;
+          results.appendChild(card);
+        });
+        if (!data.promos.length) status.textContent += ' · No validated promos found in this upload.';
+      } catch (error) {
+        status.textContent = error.message;
+      } finally { button.disabled = false; }
+    });
+    function escapeHtml(value) { const node=document.createElement('div'); node.textContent=value || ''; return node.innerHTML; }
+  </script>
+</body>
+</html>
