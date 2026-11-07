@@ -1,0 +1,6 @@
+{
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "prompt_hash": "faf34bda48f59f01310bf2903922367e2557b8dfaaf9a9bac848e37d2f6f08a8",
+  "response": "{\"judgments\":[{\"candidate_id\":\"cf9dc593fc\",\"hook_line\":\"Take your hands off her.\",\"hook_time\":\"69.90\",\"hook_type\":\"Dialogue\",\"hook_score\":9,\"cliffhanger_line\":\"...let her go.\",\"cliffhanger_score\":9,\"standalone_score\":6,\"why\":\"The stranger's bold demand instantly raises stakes, and his quiet threat leaves the outcome uncertain, creating a clear, compelling hook and a tense pause.\",\"weakness\":\"The surrounding context relies on prior knowledge, limiting immediate comprehension for new viewers.\"}]}"
+}

@@ -1,6 +1,6 @@
 # Evaluation report
 
-- Run id: fa22f272-288e-450b-b557-e073f950402f
+- Run id: db77d1c1-0b08-4a76-a1b3-82728c0ee437
 - Provider: mock
 - Model: heuristics-only
 - Parsed episodes: 50
@@ -13,7 +13,7 @@
 - Current run tokens: 0
 - Unsafe model responses omitted from raw outputs: 0
 - Estimated cost: 0
-- Runtime seconds: 15.39
+- Runtime seconds: 15.4
 - Initial live run stage error: ["Global rank: UnboundLocalError: cannot access local variable 'rejected' where it is not associated with a value"]
 - Initial live run duration seconds: 2840.7
 - Total measured tokens: 173814
@@ -30,7 +30,7 @@
 - snap_rate: 30/30 (1.000)
 - rejected_share: 39/69 (0.565)
 - cold_viewer_conflict_missing: 0/0
-- raw_proposal_validity: 11/273 (0.040)
+- raw_proposal_validity: 12/300 (0.040)
 
 ## Three-episode model smoke
 - openai/gpt-oss-120b: JSON 3/3, quotes 1/3, timestamps 3/3

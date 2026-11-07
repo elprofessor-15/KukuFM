@@ -71,12 +71,14 @@ def renamed_show_test(parent):
     target = Path(parent) / "alternate_show"
     target.mkdir()
     replacements = {}
+    generic_speaker_terms = {"GUARD"}
     for episode in source:
         for block in episode["blocks"]:
             speaker = block.get("speaker")
             if speaker:
                 for name in sorted(speaker.split(), key=len, reverse=True):
-                    if len(name) > 3 and name not in {"FORMER", "YOUNG", "LADY"}:
+                    if (len(name) > 3 and name not in {"FORMER", "YOUNG", "LADY"}
+                            and name.upper() not in generic_speaker_terms):
                         replacements.setdefault(name, f"Person{len(replacements) + 1}")
     for index, episode in enumerate(source, 101):
         original = Path("data") / episode["source"]
@@ -329,7 +331,7 @@ def main():
         check("13. five-episode ablation",
               lambda: command([sys.executable, "-m", "eval.ablation"]))
         check("13. five-episode model stability",
-              lambda: command([sys.executable, "-m", "eval.stability"]))
+              lambda: command([sys.executable, "-m", "eval.stability"], timeout=1800))
         check("13. live model stability results", verify_stability_report)
         check("13. human failure candidates",
               lambda: command([sys.executable, "-m", "eval.failures"]))

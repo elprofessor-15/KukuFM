@@ -1,0 +1,6 @@
+{
+  "provider": "groq",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_hash": "8954fef79de44f5d66b2e7f901f69c37dd9c9f5a40c1d2b1043f1e32229438aa",
+  "response": "{\n  \"judgments\": [\n    {\n      \"candidate_id\": \"42eaf4cbcc\",\n      \"hook_score\": 8,\n      \"cliffhanger_score\": 6,\n      \"standalone_score\": 7,\n      \"hook_line\": \"I changed my mind.\",\n      \"hook_time\": \"60.10\",\n      \"cliffhanger_line\": \"Enough!\",\n      \"hook_type\": \"cold rejection\",\n      \"why\": \"The groom's flat dismissal at the altar creates instant emotional stakes, and the sister's cheerful complicity plus the father's silence layer the betrayal in a way a new viewer grasps immediately.\",\n      \"weakness\": \"The closing command is a generic scene-stop rather than a specific threat or revelation that would pull a new viewer into the next beat.\"\n    }\n  ]\n}"
+}

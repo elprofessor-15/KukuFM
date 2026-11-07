@@ -1,5 +1,6 @@
 from promofinder.candidates import generate_candidates
 from promofinder.features import extract_features
+from promofinder.export import write_exports
 from promofinder.judge import judge_episode
 from promofinder.nudge import suggest_nudge
 from promofinder.pipeline import judge_top_promos as pipeline_cold_judge
@@ -52,6 +53,28 @@ def test_ranking_caps_episode_count(tmp_path):
     promos = [{"id": str(index), "segments": candidate["segments"], "duration": candidate["duration"],
                "features": feature.copy()} for index in range(4)]
     assert len(rank_promos(promos, max_per_episode=2)) == 2
+
+
+def test_exports_remove_stale_edl_files(tmp_path):
+    stale = tmp_path / "stale.edl.json"
+    stale.write_text("{}", encoding="utf-8")
+    promo = {
+        "id": "current",
+        "rank": 1,
+        "score": 7,
+        "segments": [{"episode": 1, "start": 0.0, "end": 20.0}],
+        "duration": 20.0,
+        "hook_line": "A verified hook.",
+        "cliffhanger_line": "A verified cliffhanger.",
+        "rank_reason": "Strong opening and unresolved ending.",
+        "features": {"hook_type": "mystery", "hook_line": "A verified hook.",
+                     "cliffhanger_line": "A verified cliffhanger.", "why": "A clear conflict."},
+    }
+
+    write_exports(tmp_path, [promo], [], {}, [])
+
+    assert not stale.exists()
+    assert (tmp_path / "current.edl.json").exists()
 
 
 def test_nudge_uses_half_second_targets_and_valid_beat_edges(tmp_path):

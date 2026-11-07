@@ -1,0 +1,6 @@
+{
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "prompt_hash": "b6fc87dfa78d559c4ce0d099d3cc3a0c75ec8020712eac0dcc8e9e9e32c631a8",
+  "response": "{\n  \"judgments\": [\n    {\n      \"candidate_id\": \"4868795fa3\",\n      \"hook_line\": \"You swore you loved me!\",\n      \"hook_time\": \"63.40\",\n      \"hook_type\": \"dialogue\",\n      \"hook_score\": 9,\n      \"cliffhanger_line\": \"Father... please look at me.\",\n      \"cliffhanger_score\": 8,\n      \"standalone_score\": 7,\n      \"why\": \"The dialogue reveals betrayal and a desperate plea, creating emotional tension and curiosity.\",\n      \"weakness\": \"The scene relies heavily on dialogue without visual payoff.\"\n    }\n  ]\n}"
+}

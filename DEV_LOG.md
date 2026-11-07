@@ -32,3 +32,7 @@ The leak check found that a small number of model responses repeated screenplay 
 After I included output-token headroom in the rate limiter, the first bible prompt no longer fit the configured token budget. I reduced the bible chunk size so its prompt leaves space for the schema and expected output, then added a test for that limit.
 
 A later real request showed the main Groq model's daily token cap: 200,000 tokens, with 196,853 used and 3,248 requested. The API returned retry-after values of 44 and 151 seconds on two requests. A fallback-model request completed, but the quota prevented a verified full live run. I added detection for the provider's "tokens per day" 429 response so the pipeline stops cleanly instead of retrying it as a transient error.
+
+The end-to-end check initially rejected the second-show test because the generic speaker role "guard" also appeared in a model-id filter. I excluded that role from the proper-name scan. The export check also found stale EDL files left by earlier runs, so exports now remove only obsolete EDL files in the chosen output folder. I added a regression test for that cleanup.
+
+The five-episode stability evaluation stopped during the same-model repeat after the provider reported its daily token limit for the configured Groq accounts. It did not produce stability metrics. I will not report a model-overlap result from this attempt.

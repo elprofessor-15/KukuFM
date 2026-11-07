@@ -57,7 +57,7 @@ The stability check compares two candidates in five episodes, one candidate per 
 
 ## Measured run and limits
 
-The offline run parsed 50 episodes, generated 300 candidates, pruned 11,458 windows, ranked 30 promos, and rejected 39. It took 15.39 seconds. The selected promos passed the local duration, quote, and beat-edge checks. These checks do not prove that the clips work in video.
+The offline run parsed 50 episodes, generated 300 candidates, pruned 11,458 windows, ranked 30 promos, and rejected 39. It took 15.4 seconds. The selected promos passed the local duration, quote, and beat-edge checks. These checks do not prove that the clips work in video.
 
 The first full live pass made 54 calls and used 132,015 input and 41,799 output tokens, 173,814 total, over 2,840.7 seconds. It failed at global ranking with a code error. A later live attempt hit Groq's 200,000-token daily limit for the main model. I have not completed a full live ranking, cold-viewer pass, or stability comparison. The smoke-test quotes were accurate in 2 of 9 judgments. I do not have blind labels. Prices were set to zero, so the recorded cost is not an invoice or a useful price estimate.
 

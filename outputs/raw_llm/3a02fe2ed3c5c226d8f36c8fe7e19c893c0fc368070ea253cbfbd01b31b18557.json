@@ -1,0 +1,6 @@
+{
+  "provider": "groq",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_hash": "3a02fe2ed3c5c226d8f36c8fe7e19c893c0fc368070ea253cbfbd01b31b18557",
+  "response": "{\n  \"judgments\": [\n    {\n      \"candidate_id\": \"08ee833638\",\n      \"hook_score\": 6,\n      \"cliffhanger_score\": 8,\n      \"standalone_score\": 6,\n      \"hook_line\": \"Why would you offer me your name?\",\n      \"hook_time\": \"25.90\",\n      \"cliffhanger_line\": \"I don't know what waits beyond these doors.\",\n      \"hook_type\": \"question\",\n      \"why\": \"The tension between vulnerability and defiance creates a tight emotional micro-arc that rewards attention.\",\n      \"weakness\": \"Emotional weight depends on prior knowledge of the family's cruelty to fully land.\"\n    }\n  ]\n}"
+}

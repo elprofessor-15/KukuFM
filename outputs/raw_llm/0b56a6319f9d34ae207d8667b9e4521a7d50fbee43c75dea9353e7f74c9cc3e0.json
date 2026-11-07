@@ -1,0 +1,6 @@
+{
+  "provider": "groq",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_hash": "0b56a6319f9d34ae207d8667b9e4521a7d50fbee43c75dea9353e7f74c9cc3e0",
+  "response": "{\n  \"judgments\": [\n    {\n      \"candidate_id\": \"d53a82f715\",\n      \"hook_score\": 7,\n      \"cliffhanger_score\": 8,\n      \"standalone_score\": 7,\n      \"hook_line\": \"You will not leave this church\",\n      \"hook_time\": \"6.80\",\n      \"cliffhanger_line\": \"And you have chosen to become a stranger.\",\n      \"hook_type\": \"threat\",\n      \"why\": \"The disownment escalates in clear, escalating beats from name to dowry to inheritance to death, giving a new viewer a legible emotional arc without prior context.\",\n      \"weakness\": \"The opening seconds depend on visual action before the verbal hook lands, and the ledger's personal significance remains unexplained for a first-time viewer.\"\n    }\n  ]\n}"
+}

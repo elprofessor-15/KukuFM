@@ -1,0 +1,6 @@
+{
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "prompt_hash": "2de62f5523a0f2b32590afd43e9b263c4315745ec3a495e97a5debe490fd99d2",
+  "response": "{\n  \"judgments\": [\n    {\n      \"candidate_id\": \"42eaf4cbcc\",\n      \"hook_line\": \"You swore you loved me!\",\n      \"hook_time\": \"63.40\",\n      \"hook_type\": \"dialogue\",\n      \"hook_score\": 9,\n      \"cliffhanger_line\": \"Enough!\",\n      \"cliffhanger_score\": 8,\n      \"standalone_score\": 7,\n      \"why\": \"The dialogue reveals betrayal and the final command hints at unresolved conflict.\",\n      \"weakness\": \"Resolution is deferred, leaving questions about consequences.\"\n    }\n  ]\n}"
+}

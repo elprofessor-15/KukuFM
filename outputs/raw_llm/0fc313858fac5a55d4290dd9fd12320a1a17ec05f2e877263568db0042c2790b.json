@@ -1,0 +1,6 @@
+{
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "prompt_hash": "0fc313858fac5a55d4290dd9fd12320a1a17ec05f2e877263568db0042c2790b",
+  "response": "{\n  \"judgments\": [\n    {\n      \"candidate_id\": \"d2b50db101\",\n      \"hook_line\": \"A better choice?\",\n      \"hook_time\": \"24.00\",\n      \"hook_type\": \"dialogue\",\n      \"hook_score\": 7,\n      \"cliffhanger_line\": \"Why are you surprised, sister?\",\n      \"cliffhanger_score\": 8,\n      \"standalone_score\": 6,\n      \"why\": \"The excerpt introduces conflict and emotional stakes while hinting at unresolved family tension.\",\n      \"weakness\": \"Lacks a clear resolution and broader context for new viewers.\"\n    }\n  ]\n}"
+}

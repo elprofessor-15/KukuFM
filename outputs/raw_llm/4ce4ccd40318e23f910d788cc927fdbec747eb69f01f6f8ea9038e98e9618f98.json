@@ -1,0 +1,6 @@
+{
+  "provider": "groq",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_hash": "4ce4ccd40318e23f910d788cc927fdbec747eb69f01f6f8ea9038e98e9618f98",
+  "response": "{\n  \"judgments\": [\n    {\n      \"candidate_id\": \"d2b50db101\",\n      \"hook_score\": 6,\n      \"cliffhanger_score\": 4,\n      \"standalone_score\": 5,\n      \"hook_line\": \"A better choice? Is that what she is?\",\n      \"hook_time\": \"24.00\",\n      \"cliffhanger_line\": \"Why are you surprised, sister? Look at you.\",\n      \"hook_type\": \"emotional_reaction\",\n      \"why\": \"The opening line immediately establishes public humiliation and emotional devastation, creating instant empathy and curiosity about what just happened.\",\n      \"weakness\": \"The closing line lands as a mean beat rather than a forward-driving question, and the full emotional weight depends on prior episode context.\"\n    }\n  ]\n}"
+}

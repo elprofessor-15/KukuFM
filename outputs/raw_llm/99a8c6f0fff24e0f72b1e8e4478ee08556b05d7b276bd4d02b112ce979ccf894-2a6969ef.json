@@ -1,0 +1,6 @@
+{
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "prompt_hash": "99a8c6f0fff24e0f72b1e8e4478ee08556b05d7b276bd4d02b112ce979ccf894",
+  "response": "{\"judgments\":[{\"candidate_id\":\"8a8333a532\",\"hook_line\":\"I will not become anyone's charity.\",\"hook_time\":\"56.80\",\"hook_type\":\"dialogue\",\"hook_score\":8,\"cliffhanger_line\":\"Then I accept.\",\"cliffhanger_score\":9,\"standalone_score\":7,\"why\":\"The dialogue asserts agency and resolves tension, while the final acceptance provides a clear turning point.\",\"weakness\":\"The segment relies heavily on prior context, limiting immediate clarity for new viewers.\"}]}"
+}

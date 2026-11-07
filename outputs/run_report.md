@@ -1,6 +1,6 @@
 # Run report
 
-- run_id: fa22f272-288e-450b-b557-e073f950402f
+- run_id: db77d1c1-0b08-4a76-a1b3-82728c0ee437
 - model: heuristics-only
 - provider: mock
 - episodes_parsed: 50
@@ -27,7 +27,7 @@
 - tokens_per_episode: {}
 - nudge_changed: 2
 - nudge_average_delta: 0.21
-- runtime_seconds: 15.39
+- runtime_seconds: 15.4
 - heuristics_only: True
 - resume: False
 - observed_model_rate_limits: {"rate_limits": {"openai/gpt-oss-120b": {"request_limit": "1000", "token_limit": "8000", "retry_after_seconds": []}, "openai/gpt-oss-20b": {"request_limit": "1000", "token_limit": "8000", "retry_after_seconds": []}, "qwen/qwen3.8-27b": {"request_limit": "1000", "token_limit": "8000", "retry_after_seconds": ["51"]}}, "rate_limit_events": [{"model": "qwen/qwen3.8-27b", "status": 429, "message": "{\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` on output tokens per minute (OTPM): Limit 1000, Requested 1252. The request's expected output toke", "headers": {"x-ratelimit-limit-requests": "1000", "x-ratelimit-limit-tokens": "8000", "x-ratelimit-remaining-requests": "995", "x-ratelimit-remaining-tokens": "8000", "x-ratelimit-reset-requests": "7m12s", "x-ratelimit-reset-tokens": "1ms"}}, {"model": "qwen/qwen3.8-27b", "status": 429, "message": "{\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` on output tokens per minute (OTPM): Limit 1000, Requested 1252. The request's expected output toke", "headers": {"x-ratelimit-limit-requests": "1000", "x-ratelimit-limit-tokens": "8000", "x-ratelimit-remaining-requests": "993", "x-ratelimit-remaining-tokens": "5554", "x-ratelimit-reset-requests": "10m4.8s", "x-ratelimit-reset-tokens": "18.345s"}}, {"model": "qwen/qwen3.8-27b", "status": 429, "message": "{\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` on output tokens per minute (OTPM): Limit 1000, Used 920, Requested 914. Please try again in 50.0", "headers": {"retry-after": "51", "x-ratelimit-limit-requests": "1000", "x-ratelimit-limit-tokens": "8000", "x-ratelimit-remaining-requests": "993", "x-ratelimit-remaining-tokens": "5784", "x-ratelimit-reset-requests": "10m4.8s", "x-ratelimit-reset-tokens": "16.62s"}}]}

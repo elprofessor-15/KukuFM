@@ -12,6 +12,7 @@ def write_exports(output: str | Path, promos: list[dict], rejected: list[dict],
                   report: dict, campaign: list[dict]) -> None:
     root = Path(output)
     root.mkdir(parents=True, exist_ok=True)
+    expected_edls = {f'{promo["id"]}.edl.json' for promo in promos}
     export_promos = copy.deepcopy(promos)
     for promo in export_promos:
         for segment in promo["segments"]:
@@ -81,3 +82,6 @@ def write_exports(output: str | Path, promos: list[dict], rejected: list[dict],
     (root / "run_report.md").write_text(
         "# Run report\n\n" + "\n".join(f"- {key}: {value}" for key, value in report.items()),
         encoding="utf-8")
+    for path in root.glob("*.edl.json"):
+        if path.name not in expected_edls:
+            path.unlink()

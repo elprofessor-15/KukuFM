@@ -1,0 +1,6 @@
+{
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "prompt_hash": "85a01c750a67523a948fec16a9322d53a1b473e321ce89b46b22826523ad8f5b",
+  "response": "{\"judgments\":[{\"candidate_id\":\"08ee833638\",\"hook_line\":\"Why would you offer me your name?\",\"hook_time\":\"25.90\",\"hook_type\":\"question\",\"hook_score\":8,\"cliffhanger_line\":\"I don't know what waits beyond these doors.\",\"cliffhanger_score\":7,\"standalone_score\":6,\"why\":\"The excerpt introduces conflict and a decisive choice while hinting at unknown future stakes.\",\"weakness\":\"The resolution feels abrupt and lacks broader context for new viewers.\"}]}"
+}

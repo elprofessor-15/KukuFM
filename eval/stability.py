@@ -1,7 +1,6 @@
 import json
 import sys
 import tempfile
-import uuid
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -16,12 +15,15 @@ from promofinder.preflight import preflight
 
 def main():
     config = load_config()
-    client = LLMClient(config)
     episodes = preflight(config["DATA_DIR"])["files_parsed"][:5]
     first, second, repeat = [], [], []
     primary_scores, second_scores, repeat_scores = {}, {}, {}
-    with tempfile.TemporaryDirectory(prefix="promofinder-stability-") as cache_dir:
-        repeat_client = LLMClient(config | {"CACHE_DIR": cache_dir})
+    with tempfile.TemporaryDirectory(prefix="promofinder-stability-") as temporary_dir:
+        temporary_output = Path(temporary_dir) / "outputs"
+        temporary_output.mkdir()
+        client = LLMClient(config | {"OUTPUT_DIR": str(temporary_output)})
+        repeat_client = LLMClient(config | {"CACHE_DIR": str(Path(temporary_dir) / "cache"),
+                                            "OUTPUT_DIR": str(temporary_output)})
         for episode in episodes:
             path = Path(config["DATA_DIR"]) / episode["source"]
             protected_text = path.read_text(encoding="utf-8", errors="replace")
@@ -72,17 +74,18 @@ def main():
               "candidates_per_episode": 2,
               "candidates_per_request": 1,
               "note": "Single-candidate requests keep the second-model response within its observed output-token limit.",
-              "cached_or_live_primary_and_second_calls": client.stats["calls"],
-              "primary_and_second_cache_hits": client.stats["cache_hits"],
               "same_model_repeat_cache_hits": repeat_client.stats["cache_hits"],
               "same_model_live_repeat_calls": repeat_client.stats["calls"]}
     print(json.dumps(result, indent=2))
     Path("eval/stability.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
     runs_dir = Path(config["OUTPUT_DIR"]) / "model_runs"
     runs_dir.mkdir(parents=True, exist_ok=True)
+    for path in runs_dir.glob("stability-*.json"):
+        path.unlink()
     for model, ids in ((config["MODEL_NAME"], primary_top),
                        (config["SECOND_MODEL_NAME"], second_top)):
-        run_id = f"stability-{uuid.uuid4().hex[:12]}"
+        role = "primary" if model == config["MODEL_NAME"] else "second"
+        run_id = f"stability-{role}"
         (runs_dir / f"{run_id}.json").write_text(json.dumps({
             "run_id": run_id, "provider": config["MODEL_PROVIDER"], "model": model,
             "ids": ids, "sampled_episodes": len(episodes), "complete": True}, indent=2), encoding="utf-8")

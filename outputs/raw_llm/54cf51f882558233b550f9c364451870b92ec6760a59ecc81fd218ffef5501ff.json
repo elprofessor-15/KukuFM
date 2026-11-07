@@ -1,0 +1,6 @@
+{
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "prompt_hash": "54cf51f882558233b550f9c364451870b92ec6760a59ecc81fd218ffef5501ff",
+  "response": "{\n  \"judgments\": [\n    {\n      \"candidate_id\": \"d53a82f715\",\n      \"hook_line\": \"The vows are spoken, Father.\",\n      \"hook_time\": \"0:11\",\n      \"hook_type\": \"dialogue\",\n      \"hook_score\": 8,\n      \"cliffhanger_line\": \"You leave as no daughter of mine.\",\n      \"cliffhanger_score\": 7,\n      \"standalone_score\": 6,\n      \"why\": \"Strong emotional stakes and clear conflict introduced.\",\n      \"weakness\": \"Resolution relies on prior episode context.\"\n    }\n  ]\n}"
+}
