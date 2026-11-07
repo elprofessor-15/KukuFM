@@ -60,12 +60,12 @@ Each accept adds 0.5 points and each reject removes 0.5 points for promos with t
 
 Screenplay time may not match the final video. Speaker aliases are not always resolved. An exact transcript quote does not prove that the visual moment reads clearly. A person should review all final cuts.
 
-The stability check compares two candidates in five episodes, one candidate per request. This keeps the Qwen response within the output limit observed in the smoke run, so it does not measure every candidate in the show.
+The live stability check sampled two candidates in five episodes, one candidate per request. It found top-10 overlap of 1.0 between `openai/gpt-oss-120b` and `qwen/qwen3.8-27b`, and 1.0 on a live same-model repeat. The mean absolute score change was 0.233. This small sample does not measure every candidate in the show.
 
 ## Measured run and limits
 
 The offline run parsed 50 episodes, generated 300 candidates, pruned 11,458 windows, ranked 30 promos, and rejected 39. It took 15.4 seconds. The selected promos passed the local duration, quote, and beat-edge checks. These checks do not prove that the clips work in video.
 
-The first full live pass made 54 calls and used 132,015 input and 41,799 output tokens, 173,814 total, over 2,840.7 seconds. It failed at global ranking with a code error. A later live attempt hit Groq's 200,000-token daily limit for the main model. I have not completed a full live ranking, cold-viewer pass, or stability comparison. The smoke-test quotes were accurate in 2 of 9 judgments. I do not have blind labels. Prices were set to zero, so the recorded cost is not an invoice or a useful price estimate.
+The first full live pass made 54 calls and used 132,015 input and 41,799 output tokens, 173,814 total, over 2,840.7 seconds. It failed at global ranking with a code error. A later live attempt hit Groq's daily token limit. I have not completed a full fresh live ranking or cold-viewer pass. The smoke-test quotes were accurate in 2 of 9 judgments. I do not have blind labels. Prices were set to zero, so the recorded cost is not an invoice or a useful price estimate.
 
 The model API supports cached per-episode requests, but total usage still depends on episode count, prompt size, and provider limits. I keep an editor as the final check. Rerun the live pipeline after the provider quota resets, review the new report, and do not treat the current heuristic output as a finished AI ranking.

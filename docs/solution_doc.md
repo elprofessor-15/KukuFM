@@ -24,6 +24,8 @@ The first live pass made 54 calls and used 132,015 input plus 41,799 output toke
 
 My 3-episode smoke found exact quote evidence in 2 of 9 model judgments. JSON and timestamps were valid in 9 of 9. The raw proposal check found 12 valid proposals out of 300. I have not collected blind labels or cold-viewer results.
 
+The five-episode stability sample found 1.0 top-10 overlap between `openai/gpt-oss-120b` and `qwen/qwen3.8-27b`, and 1.0 overlap on a live repeat of the primary model. The same-model mean absolute score change was 0.233. This sample used two candidates per episode, so it is limited evidence.
+
 ## Failures
 
 [WRITE THIS YOURSELF: Review the real candidates in eval/failure_candidates.md and explain which picks are weak.]

@@ -1,0 +1,19 @@
+{
+  "run_id": "stability-primary",
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "ids": [
+    "4868795fa3",
+    "42eaf4cbcc",
+    "3a517da5e2",
+    "d2b50db101",
+    "08ee833638",
+    "d1a6bd60f9",
+    "b0abc0b463",
+    "cf9dc593fc",
+    "8a8333a532",
+    "d53a82f715"
+  ],
+  "sampled_episodes": 5,
+  "complete": true
+}

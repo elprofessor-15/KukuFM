@@ -1,0 +1,19 @@
+{
+  "run_id": "stability-second",
+  "provider": "groq",
+  "model": "qwen/qwen3.8-27b",
+  "ids": [
+    "4868795fa3",
+    "b0abc0b463",
+    "d53a82f715",
+    "d1a6bd60f9",
+    "42eaf4cbcc",
+    "08ee833638",
+    "8a8333a532",
+    "3a517da5e2",
+    "d2b50db101",
+    "cf9dc593fc"
+  ],
+  "sampled_episodes": 5,
+  "complete": true
+}

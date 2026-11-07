@@ -1,0 +1,14 @@
+{
+  "primary_vs_second_model_top10_overlap": 1.0,
+  "same_model_repeat_top10_overlap": 1.0,
+  "same_model_score_variance": 0.0528,
+  "same_model_mean_absolute_score_delta": 0.233,
+  "episodes": 5,
+  "primary_model": "openai/gpt-oss-120b",
+  "second_model": "qwen/qwen3.8-27b",
+  "candidates_per_episode": 2,
+  "candidates_per_request": 1,
+  "note": "Single-candidate requests keep the second-model response within its observed output-token limit.",
+  "same_model_repeat_cache_hits": 0,
+  "same_model_live_repeat_calls": 12
+}
