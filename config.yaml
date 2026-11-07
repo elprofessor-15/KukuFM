@@ -1,0 +1,23 @@
+features:
+  weights:
+    hook: 0.28
+    cliffhanger: 0.27
+    standalone: 0.25
+    cold_clarity: 0.20
+  hook_keywords:
+    - slap
+    - reveal
+    - betrayal
+    - secret
+    - pregnant
+    - divorce
+    - heir
+    - poison
+    - truth
+    - lie
+  closure_words:
+    - goodbye
+    - thanks
+    - laughter
+    - reconciled
+    - forgive you
