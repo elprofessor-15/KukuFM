@@ -41,14 +41,20 @@ Before saving a response, the client checks it against the input text in memory.
 
 ## App hosting
 
-I run the app locally with `streamlit run app.py`. The app is not hosted on Streamlit Community Cloud yet. To deploy it:
+I run the app locally with `streamlit run app.py`. I created the Community Cloud app at [kukufm-gd3hvewryz.streamlit.app](https://kukufm-gd3hvewryz.streamlit.app), but its first build failed because it selected Python 3.14 and could not build the pinned PyArrow dependency. The app is tested with Python 3.12.
 
-1. Sign in at [Streamlit Community Cloud](https://share.streamlit.io/) with an account that can access the private `elprofessor-15/KukuFM` GitHub repository.
-2. Choose **Create app**, select repository `elprofessor-15/KukuFM`, branch `main`, and main file `app.py`.
-3. In the app settings, add `GROQ_API_KEY`, `GROQ_API_KEY2`, `GROQ_API_KEY3`, and `APP_PASSWORD` to Secrets. Use the same key values from the local `.env`, do not put them in GitHub files.
-4. Deploy. Streamlit will provide the live app URL in the app workspace. Test it in a private browser window. The app accepts an episode ZIP because the confidential local `data/` folder is not uploaded.
+To fix the failed build, open the app in [Streamlit Community Cloud](https://share.streamlit.io/), open **Manage app**, and check its Python version setting. Select Python 3.12 and restart/redeploy. If the existing deployment does not let me change its Python version, delete only the failed Cloud app, then create it again with repository `elprofessor-15/KukuFM`, branch `main`, main file `app.py`, and Python 3.12 in **Advanced settings**. Deleting the Cloud app does not delete the GitHub repository.
 
-This deployment needs the account owner to complete the Streamlit sign-in and GitHub authorization. I cannot complete that step from this workspace.
+In **Advanced settings** or app **Secrets**, add:
+
+```toml
+GROQ_API_KEY = "paste your primary key"
+GROQ_API_KEY2 = "paste your second key"
+GROQ_API_KEY3 = "paste your third key"
+APP_PASSWORD = "choose a password"
+```
+
+Paste your actual values from the local `.env` directly into Streamlit, not into chat or a GitHub file. `APP_PASSWORD` can be empty if no password gate is wanted. Save and deploy. The app accepts an episode ZIP because the confidential local `data/` folder is not uploaded. Confirm that the build finishes, then open the app URL above and test it in a private browser window.
 
 ## Ranking and feedback
 
