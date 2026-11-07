@@ -1,0 +1,6 @@
+{
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "prompt_hash": "952f1253013deb2fb3670c11aebf00c356f70c892d377c0ddbb350c0bb3eb086",
+  "response": "{\n  \"judgments\": [\n    {\n      \"candidate_id\": \"cfce27e0c4\",\n      \"hook_line\": \"Mother?\",\n      \"hook_time\": \"early\",\n      \"hook_type\": \"question\",\n      \"hook_score\": 7,\n      \"cliffhanger_line\": \"Someone wanted me erased.\",\n      \"cliffhanger_score\": 8,\n      \"standalone_score\": 6,\n      \"why\": \"The opening question creates intrigue and the reveal of a hidden threat leaves tension.\",\n      \"weakness\": \"Limited context may confuse new viewers.\"\n    }\n  ]\n}"
+}

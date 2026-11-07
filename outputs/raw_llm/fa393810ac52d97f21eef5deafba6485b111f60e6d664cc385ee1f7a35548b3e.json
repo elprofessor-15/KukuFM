@@ -1,0 +1,6 @@
+{
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "prompt_hash": "fa393810ac52d97f21eef5deafba6485b111f60e6d664cc385ee1f7a35548b3e",
+  "response": "{\n  \"judgments\": [\n    {\n      \"candidate_id\": \"dc063f3129\",\n      \"hook_line\": \"Gerald freezes, his arrogant bravado instantly vanishing\",\n      \"hook_score\": 8,\n      \"hook_time\": \"mid‑scene\",\n      \"hook_type\": \"character shock\",\n      \"cliffhanger_line\": \"We are leaving.\",\n      \"cliffhanger_score\": 7,\n      \"standalone_score\": 7,\n      \"why\": \"The freeze creates immediate tension and the departure line hints at unresolved conflict.\",\n      \"weakness\": \"Lacks a clear resolution for the newcomer’s threat.\"\n    }\n  ]\n}"
+}

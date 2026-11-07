@@ -1,0 +1,21 @@
+{
+  "provider": "groq",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_hash": "bc7dc7234ddd131772b37186b9fd0483894b0d09949fca248aea6f6264218499",
+  "response": {
+    "judgments": [
+      {
+        "candidate_id": "3a517da5e2",
+        "hook_score": 8,
+        "cliffhanger_score": 3,
+        "standalone_score": 7,
+        "hook_line": "I cannot marry you, Juliana.",
+        "hook_time": "0.00",
+        "cliffhanger_line": "Do not disgrace us further.",
+        "hook_type": "public rejection",
+        "why": "Immediate altar rejection is visceral and self-contained, establishing the central conflict without prior context.",
+        "weakness": "One-directional humiliation with no counterpoint or moment of protagonist strength to create forward momentum."
+      }
+    ]
+  }
+}

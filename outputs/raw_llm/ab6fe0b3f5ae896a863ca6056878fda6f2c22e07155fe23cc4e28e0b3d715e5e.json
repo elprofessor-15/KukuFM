@@ -1,0 +1,21 @@
+{
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "prompt_hash": "ab6fe0b3f5ae896a863ca6056878fda6f2c22e07155fe23cc4e28e0b3d715e5e",
+  "response": {
+    "judgments": [
+      {
+        "candidate_id": "b0abc0b463",
+        "hook_score": 9,
+        "cliffhanger_score": 8,
+        "standalone_score": 7,
+        "hook_line": "Take your hands off her.",
+        "hook_time": "69.90",
+        "cliffhanger_line": "I said...",
+        "hook_type": "Dialogue",
+        "why": "The opening command grabs attention, and the abrupt threat leaves viewers wanting more.",
+        "weakness": "Lacks immediate emotional stakes"
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "model": "openai/gpt-oss-120b",
+    "episode": 1,
+    "json_valid": true,
+    "quote_accurate": true,
+    "timestamp_accurate": true,
+    "error": null
+  },
+  {
+    "model": "openai/gpt-oss-120b",
+    "episode": 2,
+    "json_valid": true,
+    "quote_accurate": false,
+    "timestamp_accurate": true,
+    "error": null
+  },
+  {
+    "model": "openai/gpt-oss-120b",
+    "episode": 3,
+    "json_valid": true,
+    "quote_accurate": false,
+    "timestamp_accurate": true,
+    "error": null
+  },
+  {
+    "model": "openai/gpt-oss-20b",
+    "episode": 1,
+    "json_valid": true,
+    "quote_accurate": false,
+    "timestamp_accurate": true,
+    "error": null
+  },
+  {
+    "model": "openai/gpt-oss-20b",
+    "episode": 2,
+    "json_valid": true,
+    "quote_accurate": false,
+    "timestamp_accurate": true,
+    "error": null
+  },
+  {
+    "model": "openai/gpt-oss-20b",
+    "episode": 3,
+    "json_valid": true,
+    "quote_accurate": false,
+    "timestamp_accurate": true,
+    "error": null
+  },
+  {
+    "model": "qwen/qwen3.8-27b",
+    "episode": 1,
+    "json_valid": true,
+    "quote_accurate": true,
+    "timestamp_accurate": true,
+    "error": null
+  },
+  {
+    "model": "qwen/qwen3.8-27b",
+    "episode": 2,
+    "json_valid": true,
+    "quote_accurate": false,
+    "timestamp_accurate": true,
+    "error": null
+  },
+  {
+    "model": "qwen/qwen3.8-27b",
+    "episode": 3,
+    "json_valid": true,
+    "quote_accurate": false,
+    "timestamp_accurate": true,
+    "error": null
+  }
+]

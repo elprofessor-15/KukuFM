@@ -15,6 +15,15 @@ features:
     - poison
     - truth
     - lie
+  reactive_openers:
+    - what
+    - why
+    - how
+    - again
+    - that
+    - this
+    - him
+    - her
   closure_words:
     - goodbye
     - thanks

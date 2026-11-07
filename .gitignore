@@ -3,6 +3,8 @@
 data/
 .cache/
 .venv/
+docs/solution_doc_draft.pdf
 __pycache__/
+.pytest_cache/
 *.pyc
 .DS_Store

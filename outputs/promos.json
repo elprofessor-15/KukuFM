@@ -1,0 +1,2244 @@
+[
+  {
+    "id": "7500656d88",
+    "segments": [
+      {
+        "episode": 1,
+        "start": 66.5,
+        "end": 91.9,
+        "in": "01:06.50",
+        "out": "01:31.90"
+      }
+    ],
+    "duration": 25.400000000000006,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 6.6,
+      "cliffhanger": 5,
+      "standalone": 8.5,
+      "density": 1.496,
+      "speaker_count": 3,
+      "emotion_shifts": 9,
+      "central_conflict": true,
+      "speakers": [
+        "LADY IN GOLD GOWN",
+        "LADY JULIANA",
+        "MATRIARCH"
+      ],
+      "character_pair": [
+        "LADY IN GOLD GOWN",
+        "LADY JULIANA"
+      ],
+      "reactive_opening": false,
+      "hook_type": "shocking line",
+      "resolved_soon_after": false,
+      "context_debt": 0,
+      "spoiler_risk": 0.0,
+      "hook_line": "People change their minds, sister.",
+      "cliffhanger_line": "Enough!",
+      "why": "3 speakers and 38 dialogue words in 25.4 seconds."
+    },
+    "hook_score": 6.6,
+    "cliffhanger_score": 5,
+    "standalone_score": 8.5,
+    "hook_line": "People change their minds, sister.",
+    "cliffhanger_line": "Enough!",
+    "hook_type": "shocking line",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.85,
+      "cliffhanger": 1.35,
+      "standalone": 2.12,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 0.0,
+      "resolved_penalty": 0,
+      "quote_penalty": 0
+    },
+    "score": 6.32,
+    "rank_reason": "Weighted hook 1.85, cliffhanger 1.35, standalone 2.12, cold clarity 1.0; penalties total 0.0. Final score 6.32.",
+    "rank": 1,
+    "post_first": true,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 1,
+        "start": 66.5,
+        "end": 91.9,
+        "in": "01:06.50",
+        "out": "01:31.90"
+      },
+      "suggested": {
+        "episode": 1,
+        "start": 66.5,
+        "end": 91.9
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "3526486ad2",
+    "segments": [
+      {
+        "episode": 33,
+        "start": 91.0,
+        "end": 113.5,
+        "in": "01:31.00",
+        "out": "01:53.50"
+      }
+    ],
+    "duration": 22.5,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 5.2,
+      "cliffhanger": 6,
+      "standalone": 7.0,
+      "density": 1.2,
+      "speaker_count": 2,
+      "emotion_shifts": 8,
+      "central_conflict": true,
+      "speakers": [
+        "LORD",
+        "MAID"
+      ],
+      "character_pair": [
+        "LORD",
+        "MAID"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 2,
+      "spoiler_risk": 0.0,
+      "hook_line": "Like a circle?",
+      "cliffhanger_line": "I don't know!",
+      "why": "2 speakers and 27 dialogue words in 22.5 seconds."
+    },
+    "hook_score": 5.2,
+    "cliffhanger_score": 6,
+    "standalone_score": 7.0,
+    "hook_line": "Like a circle?",
+    "cliffhanger_line": "I don't know!",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.46,
+      "cliffhanger": 1.62,
+      "standalone": 1.75,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.2,
+      "resolved_penalty": 0,
+      "quote_penalty": 0
+    },
+    "score": 4.63,
+    "rank_reason": "Weighted hook 1.46, cliffhanger 1.62, standalone 1.75, cold clarity 1.0; penalties total 1.2. Final score 4.63.",
+    "rank": 2,
+    "post_first": true,
+    "nudge": {
+      "changed": true,
+      "original": {
+        "episode": 33,
+        "start": 91.0,
+        "end": 113.5,
+        "in": "01:31.00",
+        "out": "01:53.50"
+      },
+      "suggested": {
+        "episode": 33,
+        "start": 89.0,
+        "end": 113.5
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "884ad25123",
+    "segments": [
+      {
+        "episode": 35,
+        "start": 42.5,
+        "end": 77.5,
+        "in": "00:42.50",
+        "out": "01:17.50"
+      }
+    ],
+    "duration": 35.0,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 6.7,
+      "cliffhanger": 4,
+      "standalone": 7.0,
+      "density": 1.0,
+      "speaker_count": 2,
+      "emotion_shifts": 9,
+      "central_conflict": true,
+      "speakers": [
+        "ALEXANDER",
+        "ALEXANDER'S MOTHER"
+      ],
+      "character_pair": [
+        "ALEXANDER",
+        "ALEXANDER'S MOTHER"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 2,
+      "spoiler_risk": 0.0,
+      "hook_line": "Mother?",
+      "cliffhanger_line": "I wasn't supposed to.",
+      "why": "2 speakers and 35 dialogue words in 35.0 seconds."
+    },
+    "hook_score": 6.7,
+    "cliffhanger_score": 4,
+    "standalone_score": 7.0,
+    "hook_line": "Mother?",
+    "cliffhanger_line": "I wasn't supposed to.",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.88,
+      "cliffhanger": 1.08,
+      "standalone": 1.75,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.2,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 4.01,
+    "rank_reason": "Weighted hook 1.88, cliffhanger 1.08, standalone 1.75, cold clarity 1.0; penalties total 1.7. Final score 4.01.",
+    "rank": 3,
+    "post_first": true,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 35,
+        "start": 42.5,
+        "end": 77.5,
+        "in": "00:42.50",
+        "out": "01:17.50"
+      },
+      "suggested": {
+        "episode": 35,
+        "start": 42.5,
+        "end": 77.5
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "70deea483c",
+    "segments": [
+      {
+        "episode": 18,
+        "start": 65.8,
+        "end": 86.2,
+        "in": "01:05.80",
+        "out": "01:26.20"
+      }
+    ],
+    "duration": 20.400000000000006,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 6.7,
+      "cliffhanger": 4,
+      "standalone": 7.0,
+      "density": 0.539,
+      "speaker_count": 2,
+      "emotion_shifts": 4,
+      "central_conflict": true,
+      "speakers": [
+        "ALEXANDER",
+        "JULIANA"
+      ],
+      "character_pair": [
+        "ALEXANDER",
+        "JULIANA"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 2,
+      "spoiler_risk": 0.0,
+      "hook_line": "Juliana, the ceiling is coming down!",
+      "cliffhanger_line": "Alexander!",
+      "why": "2 speakers and 11 dialogue words in 20.4 seconds."
+    },
+    "hook_score": 6.7,
+    "cliffhanger_score": 4,
+    "standalone_score": 7.0,
+    "hook_line": "Juliana, the ceiling is coming down!",
+    "cliffhanger_line": "Alexander!",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.88,
+      "cliffhanger": 1.08,
+      "standalone": 1.75,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.2,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 4.01,
+    "rank_reason": "Weighted hook 1.88, cliffhanger 1.08, standalone 1.75, cold clarity 1.0; penalties total 1.7. Final score 4.01.",
+    "rank": 4,
+    "post_first": true,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 18,
+        "start": 65.8,
+        "end": 86.2,
+        "in": "01:05.80",
+        "out": "01:26.20"
+      },
+      "suggested": {
+        "episode": 18,
+        "start": 65.8,
+        "end": 86.2
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "8efe85bb0b",
+    "segments": [
+      {
+        "episode": 22,
+        "start": 49.5,
+        "end": 72.6,
+        "in": "00:49.50",
+        "out": "01:12.60"
+      }
+    ],
+    "duration": 23.099999999999994,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 4.7,
+      "cliffhanger": 4,
+      "standalone": 7.0,
+      "density": 1.299,
+      "speaker_count": 2,
+      "emotion_shifts": 8,
+      "central_conflict": true,
+      "speakers": [
+        "HOUSEKEEPER",
+        "LADY JULIANA"
+      ],
+      "character_pair": [
+        "HOUSEKEEPER",
+        "LADY JULIANA"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 2,
+      "spoiler_risk": 0.0,
+      "hook_line": "She looks soft.",
+      "cliffhanger_line": "Yes, ma'am.",
+      "why": "2 speakers and 30 dialogue words in 23.1 seconds."
+    },
+    "hook_score": 4.7,
+    "cliffhanger_score": 4,
+    "standalone_score": 7.0,
+    "hook_line": "She looks soft.",
+    "cliffhanger_line": "Yes, ma'am.",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.32,
+      "cliffhanger": 1.08,
+      "standalone": 1.75,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.2,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 3.45,
+    "rank_reason": "Weighted hook 1.32, cliffhanger 1.08, standalone 1.75, cold clarity 1.0; penalties total 1.7. Final score 3.45.",
+    "rank": 5,
+    "post_first": true,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 22,
+        "start": 49.5,
+        "end": 72.6,
+        "in": "00:49.50",
+        "out": "01:12.60"
+      },
+      "suggested": {
+        "episode": 22,
+        "start": 49.5,
+        "end": 72.6
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "b77fc94843",
+    "segments": [
+      {
+        "episode": 29,
+        "start": 59.3,
+        "end": 80.6,
+        "in": "00:59.30",
+        "out": "01:20.60"
+      }
+    ],
+    "duration": 21.299999999999997,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 4.6,
+      "cliffhanger": 4,
+      "standalone": 7.0,
+      "density": 2.066,
+      "speaker_count": 3,
+      "emotion_shifts": 7,
+      "central_conflict": true,
+      "speakers": [
+        "CATHERINE",
+        "GUARD",
+        "JULIANA"
+      ],
+      "character_pair": [
+        "CATHERINE",
+        "GUARD"
+      ],
+      "reactive_opening": false,
+      "hook_type": "shocking line",
+      "resolved_soon_after": false,
+      "context_debt": 2,
+      "spoiler_risk": 0.0,
+      "hook_line": "I am doing this because women like you",
+      "cliffhanger_line": "Move along, girl.",
+      "why": "3 speakers and 44 dialogue words in 21.3 seconds."
+    },
+    "hook_score": 4.6,
+    "cliffhanger_score": 4,
+    "standalone_score": 7.0,
+    "hook_line": "I am doing this because women like you",
+    "cliffhanger_line": "Move along, girl.",
+    "hook_type": "shocking line",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.29,
+      "cliffhanger": 1.08,
+      "standalone": 1.75,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.2,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 3.42,
+    "rank_reason": "Weighted hook 1.29, cliffhanger 1.08, standalone 1.75, cold clarity 1.0; penalties total 1.7. Final score 3.42.",
+    "rank": 6,
+    "post_first": false,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 29,
+        "start": 59.3,
+        "end": 80.6,
+        "in": "00:59.30",
+        "out": "01:20.60"
+      },
+      "suggested": {
+        "episode": 29,
+        "start": 59.3,
+        "end": 80.6
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "d7495fc255",
+    "segments": [
+      {
+        "episode": 18,
+        "start": 39.5,
+        "end": 60.0,
+        "in": "00:39.50",
+        "out": "01:00.00"
+      }
+    ],
+    "duration": 20.5,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 5.2,
+      "cliffhanger": 6,
+      "standalone": 6.25,
+      "density": 0.634,
+      "speaker_count": 2,
+      "emotion_shifts": 4,
+      "central_conflict": true,
+      "speakers": [
+        "ALEXANDER",
+        "JULIANA"
+      ],
+      "character_pair": [
+        "ALEXANDER",
+        "JULIANA"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 3,
+      "spoiler_risk": 0.0,
+      "hook_line": "We cannot get through!",
+      "cliffhanger_line": "Leave it!",
+      "why": "2 speakers and 13 dialogue words in 20.5 seconds."
+    },
+    "hook_score": 5.2,
+    "cliffhanger_score": 6,
+    "standalone_score": 6.25,
+    "hook_line": "We cannot get through!",
+    "cliffhanger_line": "Leave it!",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.46,
+      "cliffhanger": 1.62,
+      "standalone": 1.56,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.8,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 1.0
+    },
+    "score": 2.84,
+    "rank_reason": "Weighted hook 1.46, cliffhanger 1.62, standalone 1.56, cold clarity 1.0; penalties total 2.8. Final score 2.84.",
+    "rank": 7,
+    "post_first": false,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 18,
+        "start": 39.5,
+        "end": 60.0,
+        "in": "00:39.50",
+        "out": "01:00.00"
+      },
+      "suggested": {
+        "episode": 18,
+        "start": 39.5,
+        "end": 60.0
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "a36060c23f",
+    "segments": [
+      {
+        "episode": 28,
+        "start": 71.2,
+        "end": 92.8,
+        "in": "01:11.20",
+        "out": "01:32.80"
+      }
+    ],
+    "duration": 21.599999999999994,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 5.2,
+      "cliffhanger": 6,
+      "standalone": 6.25,
+      "density": 1.62,
+      "speaker_count": 2,
+      "emotion_shifts": 7,
+      "central_conflict": true,
+      "speakers": [
+        "CATHERINE",
+        "JULIANA"
+      ],
+      "character_pair": [
+        "CATHERINE",
+        "JULIANA"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 3,
+      "spoiler_risk": 0.0,
+      "hook_line": "No!",
+      "cliffhanger_line": "Juliana...",
+      "why": "2 speakers and 35 dialogue words in 21.6 seconds."
+    },
+    "hook_score": 5.2,
+    "cliffhanger_score": 6,
+    "standalone_score": 6.25,
+    "hook_line": "No!",
+    "cliffhanger_line": "Juliana...",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.46,
+      "cliffhanger": 1.62,
+      "standalone": 1.56,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.8,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 3.34,
+    "rank_reason": "Weighted hook 1.46, cliffhanger 1.62, standalone 1.56, cold clarity 1.0; penalties total 2.3. Final score 3.34.",
+    "rank": 8,
+    "post_first": false,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 28,
+        "start": 71.2,
+        "end": 92.8,
+        "in": "01:11.20",
+        "out": "01:32.80"
+      },
+      "suggested": {
+        "episode": 28,
+        "start": 71.2,
+        "end": 92.8
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "e38b6b4b72",
+    "segments": [
+      {
+        "episode": 39,
+        "start": 20.2,
+        "end": 42.2,
+        "in": "00:20.20",
+        "out": "00:42.20"
+      }
+    ],
+    "duration": 22.000000000000004,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 5.2,
+      "cliffhanger": 3,
+      "standalone": 7.0,
+      "density": 0.682,
+      "speaker_count": 4,
+      "emotion_shifts": 6,
+      "central_conflict": true,
+      "speakers": [
+        "CART DRIVER",
+        "LOYALIST FIGHTER",
+        "LOYALIST SCOUT",
+        "ROYAL SENTRY"
+      ],
+      "character_pair": [
+        "CART DRIVER",
+        "LOYALIST FIGHTER"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 2,
+      "spoiler_risk": 0.0,
+      "hook_line": "Four more inside.",
+      "cliffhanger_line": "Sleep.",
+      "why": "4 speakers and 15 dialogue words in 22.0 seconds."
+    },
+    "hook_score": 5.2,
+    "cliffhanger_score": 3,
+    "standalone_score": 7.0,
+    "hook_line": "Four more inside.",
+    "cliffhanger_line": "Sleep.",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.46,
+      "cliffhanger": 0.81,
+      "standalone": 1.75,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.2,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 3.32,
+    "rank_reason": "Weighted hook 1.46, cliffhanger 0.81, standalone 1.75, cold clarity 1.0; penalties total 1.7. Final score 3.32.",
+    "rank": 9,
+    "post_first": false,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 39,
+        "start": 20.2,
+        "end": 42.2,
+        "in": "00:20.20",
+        "out": "00:42.20"
+      },
+      "suggested": {
+        "episode": 39,
+        "start": 20.2,
+        "end": 42.2
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "01757a5be9",
+    "segments": [
+      {
+        "episode": 30,
+        "start": 33.6,
+        "end": 54.0,
+        "in": "00:33.60",
+        "out": "00:54.00"
+      }
+    ],
+    "duration": 20.4,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 5.2,
+      "cliffhanger": 3,
+      "standalone": 7.0,
+      "density": 1.814,
+      "speaker_count": 2,
+      "emotion_shifts": 4,
+      "central_conflict": true,
+      "speakers": [
+        "ELDER NOBLEMAN",
+        "RUPERT"
+      ],
+      "character_pair": [
+        "ELDER NOBLEMAN",
+        "RUPERT"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 2,
+      "spoiler_risk": 0.0,
+      "hook_line": "Then make certain she isn't! A peasant weed,",
+      "cliffhanger_line": "We give them a reason to condemn her.",
+      "why": "2 speakers and 37 dialogue words in 20.4 seconds."
+    },
+    "hook_score": 5.2,
+    "cliffhanger_score": 3,
+    "standalone_score": 7.0,
+    "hook_line": "Then make certain she isn't! A peasant weed,",
+    "cliffhanger_line": "We give them a reason to condemn her.",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.46,
+      "cliffhanger": 0.81,
+      "standalone": 1.75,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.2,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 3.32,
+    "rank_reason": "Weighted hook 1.46, cliffhanger 0.81, standalone 1.75, cold clarity 1.0; penalties total 1.7. Final score 3.32.",
+    "rank": 10,
+    "post_first": false,
+    "nudge": {
+      "changed": true,
+      "original": {
+        "episode": 30,
+        "start": 33.6,
+        "end": 54.0,
+        "in": "00:33.60",
+        "out": "00:54.00"
+      },
+      "suggested": {
+        "episode": 30,
+        "start": 32.1,
+        "end": 54.0
+      },
+      "score_delta": 0.42
+    }
+  },
+  {
+    "id": "7415b91fb6",
+    "segments": [
+      {
+        "episode": 3,
+        "start": 25.9,
+        "end": 56.2,
+        "in": "00:25.90",
+        "out": "00:56.20"
+      }
+    ],
+    "duration": 30.300000000000004,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 6.6,
+      "cliffhanger": 4,
+      "standalone": 6.25,
+      "density": 1.98,
+      "speaker_count": 2,
+      "emotion_shifts": 12,
+      "central_conflict": true,
+      "speakers": [
+        "LADY JULIANA",
+        "NOBLE MATRIARCH"
+      ],
+      "character_pair": [
+        "LADY JULIANA",
+        "NOBLE MATRIARCH"
+      ],
+      "reactive_opening": false,
+      "hook_type": "slap or violence",
+      "resolved_soon_after": false,
+      "context_debt": 3,
+      "spoiler_risk": 0.0,
+      "hook_line": "You have humiliated this family enough for one",
+      "cliffhanger_line": "Your father has chosen his family...",
+      "why": "2 speakers and 60 dialogue words in 30.3 seconds."
+    },
+    "hook_score": 6.6,
+    "cliffhanger_score": 4,
+    "standalone_score": 6.25,
+    "hook_line": "You have humiliated this family enough for one",
+    "cliffhanger_line": "Your father has chosen his family...",
+    "hook_type": "slap or violence",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.85,
+      "cliffhanger": 1.08,
+      "standalone": 1.56,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.8,
+      "resolved_penalty": 0,
+      "quote_penalty": 0
+    },
+    "score": 3.69,
+    "rank_reason": "Weighted hook 1.85, cliffhanger 1.08, standalone 1.56, cold clarity 1.0; penalties total 1.8. Final score 3.69.",
+    "rank": 11,
+    "post_first": false,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 3,
+        "start": 25.9,
+        "end": 56.2,
+        "in": "00:25.90",
+        "out": "00:56.20"
+      },
+      "suggested": {
+        "episode": 3,
+        "start": 25.9,
+        "end": 56.2
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "85e2f27770",
+    "segments": [
+      {
+        "episode": 9,
+        "start": 3.6,
+        "end": 30.8,
+        "in": "00:03.60",
+        "out": "00:30.80"
+      }
+    ],
+    "duration": 27.2,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 6.7,
+      "cliffhanger": 6,
+      "standalone": 5.5,
+      "density": 2.022,
+      "speaker_count": 3,
+      "emotion_shifts": 6,
+      "central_conflict": true,
+      "speakers": [
+        "ALEXANDER",
+        "JULIANA",
+        "PEASANT MOTHER"
+      ],
+      "character_pair": [
+        "ALEXANDER",
+        "JULIANA"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 4,
+      "spoiler_risk": 0.0,
+      "hook_line": "Stay back. I'll open it.",
+      "cliffhanger_line": "Feverfew... Not alone.",
+      "why": "3 speakers and 55 dialogue words in 27.2 seconds."
+    },
+    "hook_score": 6.7,
+    "cliffhanger_score": 6,
+    "standalone_score": 5.5,
+    "hook_line": "Stay back. I'll open it.",
+    "cliffhanger_line": "Feverfew... Not alone.",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.88,
+      "cliffhanger": 1.62,
+      "standalone": 1.38,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 2.4,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 1.0
+    },
+    "score": 2.47,
+    "rank_reason": "Weighted hook 1.88, cliffhanger 1.62, standalone 1.38, cold clarity 1.0; penalties total 3.4. Final score 2.47.",
+    "rank": 12,
+    "post_first": false,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 9,
+        "start": 3.6,
+        "end": 30.8,
+        "in": "00:03.60",
+        "out": "00:30.80"
+      },
+      "suggested": {
+        "episode": 9,
+        "start": 3.6,
+        "end": 30.8
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "ee4b4e0070",
+    "segments": [
+      {
+        "episode": 45,
+        "start": 46.1,
+        "end": 70.5,
+        "in": "00:46.10",
+        "out": "01:10.50"
+      }
+    ],
+    "duration": 24.4,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 4.7,
+      "cliffhanger": 5,
+      "standalone": 6.25,
+      "density": 1.885,
+      "speaker_count": 2,
+      "emotion_shifts": 7,
+      "central_conflict": true,
+      "speakers": [
+        "ALEXANDER",
+        "CATHERINE"
+      ],
+      "character_pair": [
+        "ALEXANDER",
+        "CATHERINE"
+      ],
+      "reactive_opening": false,
+      "hook_type": "romantic tension",
+      "resolved_soon_after": false,
+      "context_debt": 3,
+      "spoiler_risk": 0.0,
+      "hook_line": "And I loved you before I ever dared",
+      "cliffhanger_line": "Wife?!",
+      "why": "2 speakers and 46 dialogue words in 24.4 seconds."
+    },
+    "hook_score": 4.7,
+    "cliffhanger_score": 5,
+    "standalone_score": 6.25,
+    "hook_line": "And I loved you before I ever dared",
+    "cliffhanger_line": "Wife?!",
+    "hook_type": "romantic tension",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.32,
+      "cliffhanger": 1.35,
+      "standalone": 1.56,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.8,
+      "resolved_penalty": 0,
+      "quote_penalty": 0
+    },
+    "score": 3.43,
+    "rank_reason": "Weighted hook 1.32, cliffhanger 1.35, standalone 1.56, cold clarity 1.0; penalties total 1.8. Final score 3.43.",
+    "rank": 13,
+    "post_first": false,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 45,
+        "start": 46.1,
+        "end": 70.5,
+        "in": "00:46.10",
+        "out": "01:10.50"
+      },
+      "suggested": {
+        "episode": 45,
+        "start": 46.1,
+        "end": 70.5
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "f2cf0106aa",
+    "segments": [
+      {
+        "episode": 11,
+        "start": 20.9,
+        "end": 41.1,
+        "in": "00:20.90",
+        "out": "00:41.10"
+      }
+    ],
+    "duration": 20.200000000000003,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 5.2,
+      "cliffhanger": 7,
+      "standalone": 5.5,
+      "density": 3.069,
+      "speaker_count": 4,
+      "emotion_shifts": 9,
+      "central_conflict": true,
+      "speakers": [
+        "ALEXANDER",
+        "CONSTABLE",
+        "GERALD",
+        "JULIANA"
+      ],
+      "character_pair": [
+        "ALEXANDER",
+        "CONSTABLE"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 4,
+      "spoiler_risk": 0.0,
+      "hook_line": "The last time I came here.",
+      "cliffhanger_line": "A complaint is not proof.",
+      "why": "4 speakers and 62 dialogue words in 20.2 seconds."
+    },
+    "hook_score": 5.2,
+    "cliffhanger_score": 7,
+    "standalone_score": 5.5,
+    "hook_line": "The last time I came here.",
+    "cliffhanger_line": "A complaint is not proof.",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.46,
+      "cliffhanger": 1.89,
+      "standalone": 1.38,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 2.4,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 2.82,
+    "rank_reason": "Weighted hook 1.46, cliffhanger 1.89, standalone 1.38, cold clarity 1.0; penalties total 2.9. Final score 2.82.",
+    "rank": 14,
+    "post_first": false,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 11,
+        "start": 20.9,
+        "end": 41.1,
+        "in": "00:20.90",
+        "out": "00:41.10"
+      },
+      "suggested": {
+        "episode": 11,
+        "start": 20.9,
+        "end": 41.1
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "c4615c9639",
+    "segments": [
+      {
+        "episode": 31,
+        "start": 91.4,
+        "end": 111.4,
+        "in": "01:31.40",
+        "out": "01:51.40"
+      }
+    ],
+    "duration": 20.0,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 5.2,
+      "cliffhanger": 4,
+      "standalone": 6.25,
+      "density": 1.9,
+      "speaker_count": 2,
+      "emotion_shifts": 5,
+      "central_conflict": true,
+      "speakers": [
+        "CATHERINE",
+        "JULIANA"
+      ],
+      "character_pair": [
+        "CATHERINE",
+        "JULIANA"
+      ],
+      "reactive_opening": false,
+      "hook_type": "romantic tension",
+      "resolved_soon_after": false,
+      "context_debt": 3,
+      "spoiler_risk": 0.0,
+      "hook_line": "You think love makes you better than me?",
+      "cliffhanger_line": "[scoffs] Peasants? People?",
+      "why": "2 speakers and 38 dialogue words in 20.0 seconds."
+    },
+    "hook_score": 5.2,
+    "cliffhanger_score": 4,
+    "standalone_score": 6.25,
+    "hook_line": "You think love makes you better than me?",
+    "cliffhanger_line": "[scoffs] Peasants? People?",
+    "hook_type": "romantic tension",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.46,
+      "cliffhanger": 1.08,
+      "standalone": 1.56,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.8,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 1.0
+    },
+    "score": 2.3,
+    "rank_reason": "Weighted hook 1.46, cliffhanger 1.08, standalone 1.56, cold clarity 1.0; penalties total 2.8. Final score 2.3.",
+    "rank": 15,
+    "post_first": false,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 31,
+        "start": 91.4,
+        "end": 111.4,
+        "in": "01:31.40",
+        "out": "01:51.40"
+      },
+      "suggested": {
+        "episode": 31,
+        "start": 91.4,
+        "end": 111.4
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "110b9e3394",
+    "segments": [
+      {
+        "episode": 25,
+        "start": 5.1,
+        "end": 25.5,
+        "in": "00:05.10",
+        "out": "00:25.50"
+      }
+    ],
+    "duration": 20.4,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 5.2,
+      "cliffhanger": 4,
+      "standalone": 6.25,
+      "density": 1.029,
+      "speaker_count": 2,
+      "emotion_shifts": 6,
+      "central_conflict": true,
+      "speakers": [
+        "ALEXANDER",
+        "JULIANA"
+      ],
+      "character_pair": [
+        "ALEXANDER",
+        "JULIANA"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 3,
+      "spoiler_risk": 0.0,
+      "hook_line": "Juliana.",
+      "cliffhanger_line": "Who did this?",
+      "why": "2 speakers and 21 dialogue words in 20.4 seconds."
+    },
+    "hook_score": 5.2,
+    "cliffhanger_score": 4,
+    "standalone_score": 6.25,
+    "hook_line": "Juliana.",
+    "cliffhanger_line": "Who did this?",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.46,
+      "cliffhanger": 1.08,
+      "standalone": 1.56,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.8,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 2.8,
+    "rank_reason": "Weighted hook 1.46, cliffhanger 1.08, standalone 1.56, cold clarity 1.0; penalties total 2.3. Final score 2.8.",
+    "rank": 16,
+    "post_first": false,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 25,
+        "start": 5.1,
+        "end": 25.5,
+        "in": "00:05.10",
+        "out": "00:25.50"
+      },
+      "suggested": {
+        "episode": 25,
+        "start": 5.1,
+        "end": 25.5
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "7bd8c17532",
+    "segments": [
+      {
+        "episode": 34,
+        "start": 129.3,
+        "end": 150.8,
+        "in": "02:09.30",
+        "out": "02:30.80"
+      }
+    ],
+    "duration": 21.5,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 6.6,
+      "cliffhanger": 5,
+      "standalone": 5.5,
+      "density": 1.721,
+      "speaker_count": 3,
+      "emotion_shifts": 6,
+      "central_conflict": true,
+      "speakers": [
+        "JUDGE",
+        "LADY JULIANA",
+        "LORD"
+      ],
+      "character_pair": [
+        "JUDGE",
+        "LADY JULIANA"
+      ],
+      "reactive_opening": false,
+      "hook_type": "reveal",
+      "resolved_soon_after": false,
+      "context_debt": 4,
+      "spoiler_risk": 0.0,
+      "hook_line": "Without the approval of a licensed physician?",
+      "cliffhanger_line": "No.",
+      "why": "3 speakers and 37 dialogue words in 21.5 seconds."
+    },
+    "hook_score": 6.6,
+    "cliffhanger_score": 5,
+    "standalone_score": 5.5,
+    "hook_line": "Without the approval of a licensed physician?",
+    "cliffhanger_line": "No.",
+    "hook_type": "reveal",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.85,
+      "cliffhanger": 1.35,
+      "standalone": 1.38,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 2.4,
+      "resolved_penalty": 0,
+      "quote_penalty": 0
+    },
+    "score": 3.17,
+    "rank_reason": "Weighted hook 1.85, cliffhanger 1.35, standalone 1.38, cold clarity 1.0; penalties total 2.4. Final score 3.17.",
+    "rank": 17,
+    "post_first": false,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 34,
+        "start": 129.3,
+        "end": 150.8,
+        "in": "02:09.30",
+        "out": "02:30.80"
+      },
+      "suggested": {
+        "episode": 34,
+        "start": 129.3,
+        "end": 150.8
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "fc9f2bc9a3",
+    "segments": [
+      {
+        "episode": 37,
+        "start": 117.2,
+        "end": 141.0,
+        "in": "01:57.20",
+        "out": "02:21.00"
+      }
+    ],
+    "duration": 23.799999999999997,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 5.2,
+      "cliffhanger": 3,
+      "standalone": 6.25,
+      "density": 2.521,
+      "speaker_count": 2,
+      "emotion_shifts": 5,
+      "central_conflict": true,
+      "speakers": [
+        "LADY CLARISSA",
+        "NOBLEMAN"
+      ],
+      "character_pair": [
+        "LADY CLARISSA",
+        "NOBLEMAN"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 3,
+      "spoiler_risk": 0.0,
+      "hook_line": "Do you think she'll actually be executed?",
+      "cliffhanger_line": "Instead she married a nobody, played healer to",
+      "why": "2 speakers and 60 dialogue words in 23.8 seconds."
+    },
+    "hook_score": 5.2,
+    "cliffhanger_score": 3,
+    "standalone_score": 6.25,
+    "hook_line": "Do you think she'll actually be executed?",
+    "cliffhanger_line": "Instead she married a nobody, played healer to",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.46,
+      "cliffhanger": 0.81,
+      "standalone": 1.56,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.8,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 2.53,
+    "rank_reason": "Weighted hook 1.46, cliffhanger 0.81, standalone 1.56, cold clarity 1.0; penalties total 2.3. Final score 2.53.",
+    "rank": 18,
+    "post_first": false,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 37,
+        "start": 117.2,
+        "end": 141.0,
+        "in": "01:57.20",
+        "out": "02:21.00"
+      },
+      "suggested": {
+        "episode": 37,
+        "start": 117.2,
+        "end": 141.0
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "f401d49699",
+    "segments": [
+      {
+        "episode": 4,
+        "start": 32.1,
+        "end": 52.5,
+        "in": "00:32.10",
+        "out": "00:52.50"
+      }
+    ],
+    "duration": 20.4,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 5.2,
+      "cliffhanger": 3,
+      "standalone": 6.25,
+      "density": 2.108,
+      "speaker_count": 2,
+      "emotion_shifts": 6,
+      "central_conflict": true,
+      "speakers": [
+        "JULIANA",
+        "MYSTERIOUS BEARDED MAN"
+      ],
+      "character_pair": [
+        "JULIANA",
+        "MYSTERIOUS BEARDED MAN"
+      ],
+      "reactive_opening": false,
+      "hook_type": "confrontation",
+      "resolved_soon_after": false,
+      "context_debt": 3,
+      "spoiler_risk": 0.0,
+      "hook_line": "And what do you see?",
+      "cliffhanger_line": "You don't have to stand alone now.",
+      "why": "2 speakers and 43 dialogue words in 20.4 seconds."
+    },
+    "hook_score": 5.2,
+    "cliffhanger_score": 3,
+    "standalone_score": 6.25,
+    "hook_line": "And what do you see?",
+    "cliffhanger_line": "You don't have to stand alone now.",
+    "hook_type": "confrontation",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.46,
+      "cliffhanger": 0.81,
+      "standalone": 1.56,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.8,
+      "resolved_penalty": 0,
+      "quote_penalty": 0
+    },
+    "score": 3.03,
+    "rank_reason": "Weighted hook 1.46, cliffhanger 0.81, standalone 1.56, cold clarity 1.0; penalties total 1.8. Final score 3.03.",
+    "rank": 19,
+    "post_first": false,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 4,
+        "start": 32.1,
+        "end": 52.5,
+        "in": "00:32.10",
+        "out": "00:52.50"
+      },
+      "suggested": {
+        "episode": 4,
+        "start": 32.1,
+        "end": 52.5
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "4c0699fa84",
+    "segments": [
+      {
+        "episode": 20,
+        "start": 24.3,
+        "end": 44.9,
+        "in": "00:24.30",
+        "out": "00:44.90"
+      }
+    ],
+    "duration": 20.599999999999998,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 5.2,
+      "cliffhanger": 3,
+      "standalone": 6.25,
+      "density": 3.398,
+      "speaker_count": 2,
+      "emotion_shifts": 9,
+      "central_conflict": true,
+      "speakers": [
+        "CATHERINE",
+        "RUPERT"
+      ],
+      "character_pair": [
+        "CATHERINE",
+        "RUPERT"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 3,
+      "spoiler_risk": 0.0,
+      "hook_line": "...the title is mine.",
+      "cliffhanger_line": "Good. The village is already whispering about her.",
+      "why": "2 speakers and 70 dialogue words in 20.6 seconds."
+    },
+    "hook_score": 5.2,
+    "cliffhanger_score": 3,
+    "standalone_score": 6.25,
+    "hook_line": "...the title is mine.",
+    "cliffhanger_line": "Good. The village is already whispering about her.",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.46,
+      "cliffhanger": 0.81,
+      "standalone": 1.56,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.8,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 2.53,
+    "rank_reason": "Weighted hook 1.46, cliffhanger 0.81, standalone 1.56, cold clarity 1.0; penalties total 2.3. Final score 2.53.",
+    "rank": 20,
+    "post_first": false,
+    "nudge": {
+      "changed": false,
+      "original": {
+        "episode": 20,
+        "start": 24.3,
+        "end": 44.9,
+        "in": "00:24.30",
+        "out": "00:44.90"
+      },
+      "suggested": {
+        "episode": 20,
+        "start": 24.3,
+        "end": 44.9
+      },
+      "score_delta": 0.0
+    }
+  },
+  {
+    "id": "1b41b89070",
+    "segments": [
+      {
+        "episode": 48,
+        "start": 29.2,
+        "end": 51.3,
+        "in": "00:29.20",
+        "out": "00:51.30"
+      }
+    ],
+    "duration": 22.099999999999998,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 5.2,
+      "cliffhanger": 3,
+      "standalone": 6.25,
+      "density": 2.805,
+      "speaker_count": 2,
+      "emotion_shifts": 7,
+      "central_conflict": true,
+      "speakers": [
+        "AGNES",
+        "CATHERINE"
+      ],
+      "character_pair": [
+        "AGNES",
+        "CATHERINE"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 3,
+      "spoiler_risk": 0.0,
+      "hook_line": "You sent for me, my lady?",
+      "cliffhanger_line": "I'm not leaving the county, Agnes. I'm going",
+      "why": "2 speakers and 62 dialogue words in 22.1 seconds."
+    },
+    "hook_score": 5.2,
+    "cliffhanger_score": 3,
+    "standalone_score": 6.25,
+    "hook_line": "You sent for me, my lady?",
+    "cliffhanger_line": "I'm not leaving the county, Agnes. I'm going",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.46,
+      "cliffhanger": 0.81,
+      "standalone": 1.56,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 1.8,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 2.53,
+    "rank_reason": "Weighted hook 1.46, cliffhanger 0.81, standalone 1.56, cold clarity 1.0; penalties total 2.3. Final score 2.53.",
+    "rank": 21,
+    "post_first": false
+  },
+  {
+    "id": "e60b20dbdd",
+    "segments": [
+      {
+        "episode": 15,
+        "start": 60.0,
+        "end": 86.0,
+        "in": "01:00.00",
+        "out": "01:26.00"
+      }
+    ],
+    "duration": 26.0,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 6.7,
+      "cliffhanger": 4,
+      "standalone": 5.5,
+      "density": 0.346,
+      "speaker_count": 2,
+      "emotion_shifts": 3,
+      "central_conflict": true,
+      "speakers": [
+        "JULIANA",
+        "THUG WITH CAP"
+      ],
+      "character_pair": [
+        "JULIANA",
+        "THUG WITH CAP"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 4,
+      "spoiler_risk": 0.0,
+      "hook_line": "Stop!",
+      "cliffhanger_line": "Tense, low dramatic cello swell holding into an",
+      "why": "2 speakers and 9 dialogue words in 26.0 seconds."
+    },
+    "hook_score": 6.7,
+    "cliffhanger_score": 4,
+    "standalone_score": 5.5,
+    "hook_line": "Stop!",
+    "cliffhanger_line": "Tense, low dramatic cello swell holding into an",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.88,
+      "cliffhanger": 1.08,
+      "standalone": 1.38,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 2.4,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 2.43,
+    "rank_reason": "Weighted hook 1.88, cliffhanger 1.08, standalone 1.38, cold clarity 1.0; penalties total 2.9. Final score 2.43.",
+    "rank": 22,
+    "post_first": false
+  },
+  {
+    "id": "b39a7377a7",
+    "segments": [
+      {
+        "episode": 37,
+        "start": 54.0,
+        "end": 74.2,
+        "in": "00:54.00",
+        "out": "01:14.20"
+      }
+    ],
+    "duration": 20.200000000000003,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 6.7,
+      "cliffhanger": 4,
+      "standalone": 5.5,
+      "density": 1.535,
+      "speaker_count": 2,
+      "emotion_shifts": 6,
+      "central_conflict": true,
+      "speakers": [
+        "LADY CLARISSA",
+        "NOBLEMAN"
+      ],
+      "character_pair": [
+        "LADY CLARISSA",
+        "NOBLEMAN"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 4,
+      "spoiler_risk": 0.0,
+      "hook_line": "And after the ceremony...",
+      "cliffhanger_line": "To whom?",
+      "why": "2 speakers and 31 dialogue words in 20.2 seconds."
+    },
+    "hook_score": 6.7,
+    "cliffhanger_score": 4,
+    "standalone_score": 5.5,
+    "hook_line": "And after the ceremony...",
+    "cliffhanger_line": "To whom?",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.88,
+      "cliffhanger": 1.08,
+      "standalone": 1.38,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 2.4,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 2.43,
+    "rank_reason": "Weighted hook 1.88, cliffhanger 1.08, standalone 1.38, cold clarity 1.0; penalties total 2.9. Final score 2.43.",
+    "rank": 23,
+    "post_first": false
+  },
+  {
+    "id": "7cb61af317",
+    "segments": [
+      {
+        "episode": 21,
+        "start": 51.2,
+        "end": 75.5,
+        "in": "00:51.20",
+        "out": "01:15.50"
+      }
+    ],
+    "duration": 24.299999999999997,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 6.7,
+      "cliffhanger": 4,
+      "standalone": 5.5,
+      "density": 2.634,
+      "speaker_count": 2,
+      "emotion_shifts": 6,
+      "central_conflict": true,
+      "speakers": [
+        "LADY JULIANA",
+        "PRUDENCE"
+      ],
+      "character_pair": [
+        "LADY JULIANA",
+        "PRUDENCE"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 4,
+      "spoiler_risk": 0.0,
+      "hook_line": "Yes! Right away, I will get it!",
+      "cliffhanger_line": "Oh, thank God! His chest is quiet! The",
+      "why": "2 speakers and 64 dialogue words in 24.3 seconds."
+    },
+    "hook_score": 6.7,
+    "cliffhanger_score": 4,
+    "standalone_score": 5.5,
+    "hook_line": "Yes! Right away, I will get it!",
+    "cliffhanger_line": "Oh, thank God! His chest is quiet! The",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.88,
+      "cliffhanger": 1.08,
+      "standalone": 1.38,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 2.4,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 2.43,
+    "rank_reason": "Weighted hook 1.88, cliffhanger 1.08, standalone 1.38, cold clarity 1.0; penalties total 2.9. Final score 2.43.",
+    "rank": 24,
+    "post_first": false
+  },
+  {
+    "id": "92d7177d56",
+    "segments": [
+      {
+        "episode": 32,
+        "start": 97.6,
+        "end": 122.8,
+        "in": "01:37.60",
+        "out": "02:02.80"
+      }
+    ],
+    "duration": 25.200000000000003,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 4.6,
+      "cliffhanger": 6,
+      "standalone": 5.5,
+      "density": 2.262,
+      "speaker_count": 2,
+      "emotion_shifts": 9,
+      "central_conflict": true,
+      "speakers": [
+        "CATHERINE",
+        "JULIANA"
+      ],
+      "character_pair": [
+        "CATHERINE",
+        "JULIANA"
+      ],
+      "reactive_opening": false,
+      "hook_type": "reveal",
+      "resolved_soon_after": false,
+      "context_debt": 4,
+      "spoiler_risk": 0.0,
+      "hook_line": "Beauty. Money.",
+      "cliffhanger_line": "Why?!",
+      "why": "2 speakers and 57 dialogue words in 25.2 seconds."
+    },
+    "hook_score": 4.6,
+    "cliffhanger_score": 6,
+    "standalone_score": 5.5,
+    "hook_line": "Beauty. Money.",
+    "cliffhanger_line": "Why?!",
+    "hook_type": "reveal",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.29,
+      "cliffhanger": 1.62,
+      "standalone": 1.38,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 2.4,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 2.38,
+    "rank_reason": "Weighted hook 1.29, cliffhanger 1.62, standalone 1.38, cold clarity 1.0; penalties total 2.9. Final score 2.38.",
+    "rank": 25,
+    "post_first": false
+  },
+  {
+    "id": "9ae61fa4ce",
+    "segments": [
+      {
+        "episode": 36,
+        "start": 0.0,
+        "end": 31.7,
+        "in": "00:00.00",
+        "out": "00:31.70"
+      }
+    ],
+    "duration": 31.7,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 8.1,
+      "cliffhanger": 5,
+      "standalone": 4.75,
+      "density": 1.451,
+      "speaker_count": 2,
+      "emotion_shifts": 8,
+      "central_conflict": true,
+      "speakers": [
+        "ALEXANDER",
+        "ALEXANDER'S MOTHER"
+      ],
+      "character_pair": [
+        "ALEXANDER",
+        "ALEXANDER'S MOTHER"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 5,
+      "spoiler_risk": 0.0,
+      "hook_line": "Then why did they never find you?",
+      "cliffhanger_line": "They gave you to the enemy?",
+      "why": "2 speakers and 46 dialogue words in 31.7 seconds."
+    },
+    "hook_score": 8.1,
+    "cliffhanger_score": 5,
+    "standalone_score": 4.75,
+    "hook_line": "Then why did they never find you?",
+    "cliffhanger_line": "They gave you to the enemy?",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 2.27,
+      "cliffhanger": 1.35,
+      "standalone": 1.19,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 3.0,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 2.31,
+    "rank_reason": "Weighted hook 2.27, cliffhanger 1.35, standalone 1.19, cold clarity 1.0; penalties total 3.5. Final score 2.31.",
+    "rank": 26,
+    "post_first": false
+  },
+  {
+    "id": "fb639450af",
+    "segments": [
+      {
+        "episode": 8,
+        "start": 35.8,
+        "end": 62.8,
+        "in": "00:35.80",
+        "out": "01:02.80"
+      }
+    ],
+    "duration": 27.0,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 5.2,
+      "cliffhanger": 5,
+      "standalone": 5.5,
+      "density": 1.926,
+      "speaker_count": 2,
+      "emotion_shifts": 10,
+      "central_conflict": true,
+      "speakers": [
+        "ALEXANDER",
+        "JULIANA"
+      ],
+      "character_pair": [
+        "ALEXANDER",
+        "JULIANA"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 4,
+      "spoiler_risk": 0.0,
+      "hook_line": "Not yet?",
+      "cliffhanger_line": "And the scars... were they from the war?",
+      "why": "2 speakers and 52 dialogue words in 27.0 seconds."
+    },
+    "hook_score": 5.2,
+    "cliffhanger_score": 5,
+    "standalone_score": 5.5,
+    "hook_line": "Not yet?",
+    "cliffhanger_line": "And the scars... were they from the war?",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.46,
+      "cliffhanger": 1.35,
+      "standalone": 1.38,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 2.4,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 2.28,
+    "rank_reason": "Weighted hook 1.46, cliffhanger 1.35, standalone 1.38, cold clarity 1.0; penalties total 2.9. Final score 2.28.",
+    "rank": 27,
+    "post_first": false
+  },
+  {
+    "id": "f2b9fb924b",
+    "segments": [
+      {
+        "episode": 17,
+        "start": 56.5,
+        "end": 92.5,
+        "in": "00:56.50",
+        "out": "01:32.50"
+      }
+    ],
+    "duration": 36.0,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 5.2,
+      "cliffhanger": 5,
+      "standalone": 5.5,
+      "density": 0.722,
+      "speaker_count": 2,
+      "emotion_shifts": 7,
+      "central_conflict": true,
+      "speakers": [
+        "ALEXANDER",
+        "JULIANA"
+      ],
+      "character_pair": [
+        "ALEXANDER",
+        "JULIANA"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 4,
+      "spoiler_risk": 0.0,
+      "hook_line": "I was frightened.",
+      "cliffhanger_line": "Soon birds will start nesting in it.",
+      "why": "2 speakers and 26 dialogue words in 36.0 seconds."
+    },
+    "hook_score": 5.2,
+    "cliffhanger_score": 5,
+    "standalone_score": 5.5,
+    "hook_line": "I was frightened.",
+    "cliffhanger_line": "Soon birds will start nesting in it.",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.46,
+      "cliffhanger": 1.35,
+      "standalone": 1.38,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 2.4,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 2.28,
+    "rank_reason": "Weighted hook 1.46, cliffhanger 1.35, standalone 1.38, cold clarity 1.0; penalties total 2.9. Final score 2.28.",
+    "rank": 28,
+    "post_first": false
+  },
+  {
+    "id": "e48516046e",
+    "segments": [
+      {
+        "episode": 38,
+        "start": 16.0,
+        "end": 39.0,
+        "in": "00:16.00",
+        "out": "00:39.00"
+      }
+    ],
+    "duration": 23.0,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 5.2,
+      "cliffhanger": 5,
+      "standalone": 5.5,
+      "density": 0.783,
+      "speaker_count": 2,
+      "emotion_shifts": 6,
+      "central_conflict": true,
+      "speakers": [
+        "GUARD",
+        "JULIANA"
+      ],
+      "character_pair": [
+        "GUARD",
+        "JULIANA"
+      ],
+      "reactive_opening": false,
+      "hook_type": "mystery",
+      "resolved_soon_after": false,
+      "context_debt": 4,
+      "spoiler_risk": 0.0,
+      "hook_line": "Why?",
+      "cliffhanger_line": "...are you safe?",
+      "why": "2 speakers and 18 dialogue words in 23.0 seconds."
+    },
+    "hook_score": 5.2,
+    "cliffhanger_score": 5,
+    "standalone_score": 5.5,
+    "hook_line": "Why?",
+    "cliffhanger_line": "...are you safe?",
+    "hook_type": "mystery",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.46,
+      "cliffhanger": 1.35,
+      "standalone": 1.38,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 2.4,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 2.28,
+    "rank_reason": "Weighted hook 1.46, cliffhanger 1.35, standalone 1.38, cold clarity 1.0; penalties total 2.9. Final score 2.28.",
+    "rank": 29,
+    "post_first": false
+  },
+  {
+    "id": "882f4ee634",
+    "segments": [
+      {
+        "episode": 27,
+        "start": 128.7,
+        "end": 150.5,
+        "in": "02:08.70",
+        "out": "02:30.50"
+      }
+    ],
+    "duration": 21.80000000000001,
+    "ending_window": false,
+    "experimental": false,
+    "features": {
+      "hook": 5.2,
+      "cliffhanger": 5,
+      "standalone": 5.5,
+      "density": 1.193,
+      "speaker_count": 2,
+      "emotion_shifts": 5,
+      "central_conflict": true,
+      "speakers": [
+        "BLOND NOBLEMAN",
+        "JULIANA"
+      ],
+      "character_pair": [
+        "BLOND NOBLEMAN",
+        "JULIANA"
+      ],
+      "reactive_opening": false,
+      "hook_type": "romantic tension",
+      "resolved_soon_after": false,
+      "context_debt": 4,
+      "spoiler_risk": 0.0,
+      "hook_line": "That is not what I said!",
+      "cliffhanger_line": "Extreme close-up of Juliana's wide, terrified eyes as",
+      "why": "2 speakers and 26 dialogue words in 21.8 seconds."
+    },
+    "hook_score": 5.2,
+    "cliffhanger_score": 5,
+    "standalone_score": 5.5,
+    "hook_line": "That is not what I said!",
+    "cliffhanger_line": "Extreme close-up of Juliana's wide, terrified eyes as",
+    "hook_type": "romantic tension",
+    "cold_clarity": null,
+    "cold_viewer": "not run",
+    "quote_verified": true,
+    "score_breakdown": {
+      "hook": 1.46,
+      "cliffhanger": 1.35,
+      "standalone": 1.38,
+      "cold_clarity": 1.0,
+      "spoiler_penalty": 0.0,
+      "context_penalty": 2.4,
+      "resolved_penalty": 0,
+      "quote_penalty": 0,
+      "diversity_penalty": 0.5
+    },
+    "score": 2.28,
+    "rank_reason": "Weighted hook 1.46, cliffhanger 1.35, standalone 1.38, cold clarity 1.0; penalties total 2.9. Final score 2.28.",
+    "rank": 30,
+    "post_first": false
+  }
+]

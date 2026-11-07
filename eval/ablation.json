@@ -1,0 +1,8 @@
+{
+  "heuristics": 6.05,
+  "llm": 7.6,
+  "hybrid": 7.9,
+  "episodes": 5,
+  "llm_windows_per_episode": 6,
+  "method": "Heuristics score every generated window. LLM and hybrid scores use the first six generated windows without heuristic ranking."
+}

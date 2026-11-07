@@ -1,0 +1,21 @@
+{
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "prompt_hash": "c834a5477d7f737e861ab8e51ab97d495a6dc7402d87f9b687abbdd47fd1c369",
+  "response": {
+    "judgments": [
+      {
+        "candidate_id": "b0abc0b463",
+        "hook_score": 8,
+        "cliffhanger_score": 7,
+        "standalone_score": 6,
+        "hook_line": "Take your hands off her.",
+        "hook_time": "66.00",
+        "cliffhanger_line": "I said...",
+        "hook_type": "dialogue",
+        "why": "The moment introduces a mysterious protector and hints at a bold proposal.",
+        "weakness": "The excerpt lacks a clear resolution or reveal of the proposal."
+      }
+    ]
+  }
+}

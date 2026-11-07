@@ -1,0 +1,32 @@
+# Candidates for human quality review
+
+- 7500656d88: episode 1, People change their minds, sister. / Enough!
+- 3526486ad2: episode 33, Like a circle? / I don't know!
+- 884ad25123: episode 35, Mother? / I wasn't supposed to.
+- 70deea483c: episode 18, Juliana, the ceiling is coming down! / Alexander!
+- 8efe85bb0b: episode 22, She looks soft. / Yes, ma'am.
+- b77fc94843: episode 29, I am doing this because women like you / Move along, girl.
+- d7495fc255: episode 18, We cannot get through! / Leave it!
+- a36060c23f: episode 28, No! / Juliana...
+- e38b6b4b72: episode 39, Four more inside. / Sleep.
+- 01757a5be9: episode 30, Then make certain she isn't! A peasant weed, / We give them a reason to condemn her.
+- 7415b91fb6: episode 3, You have humiliated this family enough for one / Your father has chosen his family...
+- 85e2f27770: episode 9, Stay back. I'll open it. / Feverfew... Not alone.
+- ee4b4e0070: episode 45, And I loved you before I ever dared / Wife?!
+- f2cf0106aa: episode 11, The last time I came here. / A complaint is not proof.
+- c4615c9639: episode 31, You think love makes you better than me? / [scoffs] Peasants? People?
+- 110b9e3394: episode 25, Juliana. / Who did this?
+- 7bd8c17532: episode 34, Without the approval of a licensed physician? / No.
+- fc9f2bc9a3: episode 37, Do you think she'll actually be executed? / Instead she married a nobody, played healer to
+- f401d49699: episode 4, And what do you see? / You don't have to stand alone now.
+- 4c0699fa84: episode 20, ...the title is mine. / Good. The village is already whispering about her.
+- 1b41b89070: episode 48, You sent for me, my lady? / I'm not leaving the county, Agnes. I'm going
+- e60b20dbdd: episode 15, Stop! / Tense, low dramatic cello swell holding into an
+- b39a7377a7: episode 37, And after the ceremony... / To whom?
+- 7cb61af317: episode 21, Yes! Right away, I will get it! / Oh, thank God! His chest is quiet! The
+- 92d7177d56: episode 32, Beauty. Money. / Why?!
+- 9ae61fa4ce: episode 36, Then why did they never find you? / They gave you to the enemy?
+- fb639450af: episode 8, Not yet? / And the scars... were they from the war?
+- f2b9fb924b: episode 17, I was frightened. / Soon birds will start nesting in it.
+- e48516046e: episode 38, Why? / ...are you safe?
+- 882f4ee634: episode 27, That is not what I said! / Extreme close-up of Juliana's wide, terrified eyes as

@@ -1,0 +1,21 @@
+{
+  "provider": "groq",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_hash": "0d34e97a4d862a201dcd86f731cc2369f2b7ffee3dbf349fc8197a8e56c17cb1",
+  "response": {
+    "judgments": [
+      {
+        "candidate_id": "b0abc0b463",
+        "hook_score": 8,
+        "cliffhanger_score": 8,
+        "standalone_score": 6,
+        "hook_line": "and it isn't you",
+        "hook_time": "56.30",
+        "cliffhanger_line": "let her go",
+        "hook_type": "Rejection",
+        "why": "The cold dismissal instantly establishes a power imbalance and emotional wound, while the stranger's lethal intervention creates a compelling escalation that demands resolution.",
+        "weakness": "The opening line lacks enough context for a new viewer to understand why the rejection carries such weight, making the emotional stakes feel slightly abstract."
+      }
+    ]
+  }
+}

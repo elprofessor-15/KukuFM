@@ -1,0 +1,21 @@
+{
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "prompt_hash": "c3b656e43e4cb08eb37a59fd73d7147b374b465678e49d98748aef6923352e32",
+  "response": {
+    "judgments": [
+      {
+        "candidate_id": "3a517da5e2",
+        "hook_score": 9,
+        "cliffhanger_score": 8,
+        "standalone_score": 7,
+        "hook_line": "I cannot marry you, Juliana.",
+        "hook_time": "0.00",
+        "cliffhanger_line": "Do not disgrace us further.",
+        "hook_type": "dialogue",
+        "why": "Strong emotional impact, clear conflict, immediate stakes.",
+        "weakness": "Limited context for new viewers."
+      }
+    ]
+  }
+}

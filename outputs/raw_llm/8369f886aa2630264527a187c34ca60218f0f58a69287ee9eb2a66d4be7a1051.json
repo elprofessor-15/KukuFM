@@ -1,0 +1,21 @@
+{
+  "provider": "groq",
+  "model": "qwen/qwen3.8-27b",
+  "prompt_hash": "8369f886aa2630264527a187c34ca60218f0f58a69287ee9eb2a66d4be7a1051",
+  "response": {
+    "judgments": [
+      {
+        "candidate_id": "4868795fa3",
+        "hook_score": 8,
+        "cliffhanger_score": 8,
+        "standalone_score": 7,
+        "hook_line": "You let me dress in my mother's gown...",
+        "hook_time": "54.70",
+        "cliffhanger_line": "Father... please look at me.",
+        "hook_type": "emotional betrayal",
+        "why": "The excerpt escalates from personal abandonment to total family rejection, giving a new viewer a complete emotional arc in under 40 seconds.",
+        "weakness": "Lacks any visual or spatial grounding for the setting, relying entirely on dialogue to convey the wedding context."
+      }
+    ]
+  }
+}

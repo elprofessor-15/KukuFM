@@ -1,0 +1,21 @@
+{
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "prompt_hash": "0750fce98dca1f8a62c1053e7d821b39a8b038221b5dc97158d12158770cffac",
+  "response": {
+    "judgments": [
+      {
+        "candidate_id": "3a517da5e2",
+        "hook_score": 9,
+        "cliffhanger_score": 8,
+        "standalone_score": 7,
+        "hook_line": "I cannot marry you, Juliana.",
+        "hook_time": "0:00",
+        "cliffhanger_line": "Do not disgrace us further.",
+        "hook_type": "dialogue",
+        "why": "The opening line instantly establishes conflict and stakes, while the final line leaves tension unresolved.",
+        "weakness": "The segment relies heavily on dialogue without visual variety."
+      }
+    ]
+  }
+}

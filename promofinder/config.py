@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 DEFAULTS = {
-    "MODEL_PROVIDER": "groq", "USE_LLM": "true", "GROQ_API_KEY": "",
+    "MODEL_PROVIDER": "groq", "USE_LLM": "true", "GROQ_API_KEY": "", "GROQ_API_KEY2": "",
     "GROQ_BASE_URL": "https://api.groq.com/openai/v1",
     "MODEL_NAME": "openai/gpt-oss-120b", "MODEL_FALLBACK_NAME": "openai/gpt-oss-20b",
     "SECOND_MODEL_NAME": "qwen/qwen3.8-27b", "OPENAI_COMPAT_API_KEY": "",
@@ -21,6 +21,11 @@ DEFAULTS = {
 
 def load_config(streamlit_secrets: dict | None = None) -> dict[str, str]:
     values = DEFAULTS.copy()
+    if streamlit_secrets:
+        for key in values:
+            secret = streamlit_secrets.get(key)
+            if secret is not None:
+                values[key] = str(secret)
     env_file = Path(".env")
     if env_file.exists():
         for line in env_file.read_text(errors="replace").splitlines():
@@ -28,11 +33,6 @@ def load_config(streamlit_secrets: dict | None = None) -> dict[str, str]:
             if stripped and not stripped.startswith("#") and "=" in stripped:
                 key, value = stripped.split("=", 1)
                 values[key.strip()] = value.strip().strip("\"'")
-    if streamlit_secrets:
-        for key in values:
-            secret = streamlit_secrets.get(key)
-            if secret is not None:
-                values[key] = str(secret)
     values.update({key: value for key, value in os.environ.items() if key in values})
     return values
 
@@ -42,10 +42,20 @@ def api_key_name(provider: str) -> str:
             "anthropic": "ANTHROPIC_API_KEY", "mock": ""}.get(provider, "GROQ_API_KEY")
 
 
+def model_name(config: dict[str, str], provider: str | None = None) -> str:
+    provider = provider or config["MODEL_PROVIDER"]
+    model_key = {"openai_compatible": "OPENAI_COMPAT_MODEL",
+                 "anthropic": "ANTHROPIC_MODEL"}.get(provider)
+    return config.get(model_key, "") if model_key and config.get(model_key) else config.get("MODEL_NAME", "")
+
+
 def enabled_provider(config: dict[str, str]) -> str:
     provider = config["MODEL_PROVIDER"].strip()
     key_name = api_key_name(provider)
-    if config["USE_LLM"].lower() == "true" and key_name and not config.get(key_name):
+    has_key = bool(config.get(key_name)) if key_name else True
+    if provider == "groq":
+        has_key = has_key or bool(config.get("GROQ_API_KEY2"))
+    if config["USE_LLM"].lower() == "true" and key_name and not has_key:
         print(f"{key_name} is empty, using heuristics-only mode.")
         return "mock"
     return provider if config["USE_LLM"].lower() == "true" else "mock"
