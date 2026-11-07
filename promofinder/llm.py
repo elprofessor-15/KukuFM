@@ -61,8 +61,11 @@ class LLMClient:
         self.adaptive_delay = 0.0
         self.hosted_calls = 0
         self.protected_shingles: set[tuple[str, ...]] = set()
-        self.active_groq_key = ("GROQ_API_KEY" if self.config.get("GROQ_API_KEY")
-                                else "GROQ_API_KEY2")
+        self.active_groq_key = next(
+            (name for name in ("GROQ_API_KEY", "GROQ_API_KEY2", "GROQ_API_KEY3")
+             if self.config.get(name)),
+            "GROQ_API_KEY",
+        )
 
     def protect_text(self, text: str) -> None:
         token_pattern = re.compile(r"\b[\w']+\b", re.UNICODE)
@@ -231,13 +234,18 @@ class LLMClient:
         try:
             return self._request(prompt, provider, model, system, token_estimate)
         except AccountKeyUnavailable as exc:
-            if provider != "groq" or self.active_groq_key != "GROQ_API_KEY" \
-                    or not self.config.get("GROQ_API_KEY2"):
+            key_names = ("GROQ_API_KEY", "GROQ_API_KEY2", "GROQ_API_KEY3")
+            current_index = key_names.index(self.active_groq_key)
+            next_key = next((name for name in key_names[current_index + 1:]
+                             if self.config.get(name)), None)
+            if provider != "groq" or next_key is None:
                 raise BudgetExceeded("Provider daily limit reached for all configured Groq keys.") from exc
-            self.active_groq_key = "GROQ_API_KEY2"
+            previous_key = self.active_groq_key
+            self.active_groq_key = next_key
             self.stats["api_key_fallback_events"].append(
-                {"from": "GROQ_API_KEY", "to": "GROQ_API_KEY2", "reason": "provider daily token limit"})
-            return self._request(prompt, provider, model, system, token_estimate)
+                {"from": previous_key, "to": next_key, "reason": "provider daily token limit"})
+            return self._request_with_fallback(prompt, provider, model, system, token_estimate,
+                                               allow_fallback=allow_fallback)
         except BudgetExceeded:
             raise
         except LLMError as primary_error:
@@ -286,8 +294,10 @@ class LLMClient:
                 if daily_quota and ("limit" in normalized_message or "quota" in normalized_message
                                     or "rate limit" in normalized_message):
                     self.stats["quota_events"].append(_safe_provider_message(message)[:180])
-                    if provider == "groq" and self.active_groq_key == "GROQ_API_KEY" \
-                            and self.config.get("GROQ_API_KEY2"):
+                    key_names = ("GROQ_API_KEY", "GROQ_API_KEY2", "GROQ_API_KEY3")
+                    current_index = key_names.index(self.active_groq_key)
+                    if provider == "groq" and any(
+                            self.config.get(name) for name in key_names[current_index + 1:]):
                         raise AccountKeyUnavailable("Primary Groq key reached its daily token limit.") from exc
                     raise BudgetExceeded("Provider daily limit reached.")
                 if code == 400 and attempt < retries:
@@ -482,7 +492,8 @@ def list_models(config: dict[str, str] | None = None) -> list[dict]:
                                timeout=30)
         response.raise_for_status()
         return [{"id": item["id"], "chat": True} for item in response.json().get("data", [])]
-    key = (cfg.get("GROQ_API_KEY") or cfg.get("GROQ_API_KEY2", "")
+    key = (next((cfg.get(name) for name in
+                 ("GROQ_API_KEY", "GROQ_API_KEY2", "GROQ_API_KEY3") if cfg.get(name)), "")
            if provider == "groq" else cfg.get("OPENAI_COMPAT_API_KEY", ""))
     if not key:
         raise LLMError("Provider API key is empty.")

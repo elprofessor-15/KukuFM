@@ -56,7 +56,7 @@ def main():
         cost = float(run.get("estimated_cost", 0)) + float(run.get("initial_live_estimated_cost", 0))
     except ValueError as exc:
         raise SystemExit("Run report contains invalid numeric values.") from exc
-    lines = ["PromoFinder solution", "", "I rank screenplay moments for editor review.",
+    lines = ["KukuFM PromoFinder solution", "", "I rank screenplay moments for editor review.",
              "Problem: I rank 20 to 60 second screenplay moments with an early hook and unresolved ending.",
              "Pipeline:",
              "", "Assumptions: screenplay timestamps align with video. An editor checks every boundary.",

@@ -229,13 +229,44 @@ def test_daily_limit_switches_to_secondary_groq_key_without_logging_key(monkeypa
                      ("groq", "openai/gpt-oss-120b", "GROQ_API_KEY2")]
     assert "primary-private-value" not in repr(client.stats)
     assert "secondary-private-value" not in repr(client.stats)
-    assert client.stats["api_key_fallback_events"] == [{
-        "from": "GROQ_API_KEY", "to": "GROQ_API_KEY2", "reason": "provider daily token limit"}]
+
+
+def test_daily_limit_switches_through_all_three_groq_keys(monkeypatch):
+    config = DEFAULTS | {"GROQ_API_KEY": "primary-private-value",
+                         "GROQ_API_KEY2": "secondary-private-value",
+                         "GROQ_API_KEY3": "tertiary-private-value"}
+    client = LLMClient(config)
+    calls = []
+
+    def request(prompt, provider, model, system, token_estimate):
+        calls.append(client.active_groq_key)
+        if client.active_groq_key != "GROQ_API_KEY3":
+            raise AccountKeyUnavailable("daily quota")
+        return '{"ok": true}'
+
+    monkeypatch.setattr(client, "_request", request)
+    response = client._request_with_fallback("prompt", "groq", "openai/gpt-oss-120b", None, 10)
+
+    assert response == '{"ok": true}'
+    assert calls == ["GROQ_API_KEY", "GROQ_API_KEY2", "GROQ_API_KEY3"]
+    assert client.stats["api_key_fallback_events"] == [
+        {"from": "GROQ_API_KEY", "to": "GROQ_API_KEY2", "reason": "provider daily token limit"},
+        {"from": "GROQ_API_KEY2", "to": "GROQ_API_KEY3", "reason": "provider daily token limit"},
+    ]
+    assert not any(key in repr(client.stats) for key in
+                   ("primary-private-value", "secondary-private-value", "tertiary-private-value"))
 
 
 def test_secondary_groq_key_can_enable_provider_without_primary(capsys):
     config = {"MODEL_PROVIDER": "groq", "USE_LLM": "true", "GROQ_API_KEY": "",
               "GROQ_API_KEY2": "secondary-private-value"}
+    assert enabled_provider(config) == "groq"
+    assert capsys.readouterr().out == ""
+
+
+def test_tertiary_groq_key_can_enable_provider_without_other_keys(capsys):
+    config = {"MODEL_PROVIDER": "groq", "USE_LLM": "true", "GROQ_API_KEY": "",
+              "GROQ_API_KEY2": "", "GROQ_API_KEY3": "tertiary-private-value"}
     assert enabled_provider(config) == "groq"
     assert capsys.readouterr().out == ""
 

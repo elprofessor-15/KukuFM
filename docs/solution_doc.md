@@ -1,4 +1,4 @@
-# PromoFinder solution
+# KukuFM PromoFinder solution
 
 ## Problem choice
 

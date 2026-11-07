@@ -271,7 +271,7 @@ def verify_git():
     refs = command(["git", "ls-remote", "origin", "refs/heads/main"])
     if not refs or refs.split()[0] != local:
         raise AssertionError("Remote main does not match local HEAD.")
-    private = command(["gh", "repo", "view", "elprofessor-15/pocketFM_MVP",
+    private = command(["gh", "repo", "view", "elprofessor-15/KukuFM",
                        "--json", "isPrivate", "-q", ".isPrivate"])
     if private.lower() != "true":
         raise AssertionError("GitHub repository is not private.")
@@ -280,7 +280,8 @@ def verify_git():
 
 def main():
     config = load_config()
-    key_names = (("GROQ_API_KEY", "GROQ_API_KEY2") if config["MODEL_PROVIDER"] == "groq"
+    key_names = (("GROQ_API_KEY", "GROQ_API_KEY2", "GROQ_API_KEY3")
+                 if config["MODEL_PROVIDER"] == "groq"
                  else ("OPENAI_COMPAT_API_KEY",))
     if config["USE_LLM"].lower() == "true" and not any(config.get(name) for name in key_names):
         print(f"BLOCKED: {' or '.join(key_names)} are empty. Add a key to .env before live verification.")

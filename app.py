@@ -24,7 +24,7 @@ from promofinder.upload import extract_episode_zip
 from promofinder.validate import quote_in_interval, quote_verified, validate_promo
 
 
-st.set_page_config(page_title="PromoFinder", page_icon=None, layout="wide")
+st.set_page_config(page_title="KukuFM PromoFinder", page_icon=None, layout="wide")
 try:
     secrets = dict(st.secrets)
 except FileNotFoundError:
@@ -37,7 +37,7 @@ if config.get("APP_PASSWORD"):
         st.info("Enter the app password to continue.")
         st.stop()
 
-st.title("PromoFinder")
+st.title("KukuFM PromoFinder")
 st.caption("Find, rank, and review short promo windows in screenplay files.")
 tabs = st.tabs(["Run", "Results", "Promo detail", "Campaign", "Coverage", "Label", "Compare models", "About"])
 
@@ -358,4 +358,4 @@ with tabs[7]:
     assumptions = Path("ASSUMPTIONS.md")
     if assumptions.exists():
         st.markdown(assumptions.read_text(encoding="utf-8"))
-    st.link_button("GitHub repository", "https://github.com/elprofessor-15/pocketFM_MVP")
+    st.link_button("GitHub repository", "https://github.com/elprofessor-15/KukuFM")

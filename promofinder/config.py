@@ -6,6 +6,7 @@ from pathlib import Path
 
 DEFAULTS = {
     "MODEL_PROVIDER": "groq", "USE_LLM": "true", "GROQ_API_KEY": "", "GROQ_API_KEY2": "",
+    "GROQ_API_KEY3": "",
     "GROQ_BASE_URL": "https://api.groq.com/openai/v1",
     "MODEL_NAME": "openai/gpt-oss-120b", "MODEL_FALLBACK_NAME": "openai/gpt-oss-20b",
     "SECOND_MODEL_NAME": "qwen/qwen3.8-27b", "OPENAI_COMPAT_API_KEY": "",
@@ -54,7 +55,7 @@ def enabled_provider(config: dict[str, str]) -> str:
     key_name = api_key_name(provider)
     has_key = bool(config.get(key_name)) if key_name else True
     if provider == "groq":
-        has_key = has_key or bool(config.get("GROQ_API_KEY2"))
+        has_key = has_key or any(config.get(name) for name in ("GROQ_API_KEY2", "GROQ_API_KEY3"))
     if config["USE_LLM"].lower() == "true" and key_name and not has_key:
         print(f"{key_name} is empty, using heuristics-only mode.")
         return "mock"

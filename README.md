@@ -1,4 +1,4 @@
-# PromoFinder
+# KukuFM PromoFinder
 
 I use this app to find 20 to 60 second screenplay windows with a hook near the start and an unresolved ending. It returns timestamps and a review ranking. It does not edit video.
 
@@ -17,7 +17,7 @@ if [ ! -f .env ]; then cp .env.example .env; fi
 
 I run the tests with `python -m pytest -q`. Most tests use a small synthetic script, so they also run when the confidential episode pack is not installed. The check for the original 50 episode pack is skipped when that pack is absent or a different show is installed.
 
-I put the provider key in `.env`. I can keep provider and model settings there, including `MODEL_NAME`, `MODEL_FALLBACK_NAME`, and `SECOND_MODEL_NAME`. The main model defaults to `openai/gpt-oss-120b`, the fallback is `openai/gpt-oss-20b`, and the comparison model is `qwen/qwen3.8-27b`. `GROQ_API_KEY2` is optional. If the primary Groq key reaches its daily token limit, the client tries the secondary key and records the switch without storing either key.
+I put the provider keys in `.env`. I can keep provider and model settings there, including `MODEL_NAME`, `MODEL_FALLBACK_NAME`, and `SECOND_MODEL_NAME`. The main model defaults to `openai/gpt-oss-120b`, the fallback is `openai/gpt-oss-20b`, and the comparison model is `qwen/qwen3.8-27b`. `GROQ_API_KEY2` and `GROQ_API_KEY3` are optional. If a Groq key reaches its daily token limit, the client tries the next configured key and records only the variable names, not the key values.
 
 For another provider, I set `MODEL_PROVIDER` and its matching key. OpenAI compatible models use `OPENAI_COMPAT_BASE_URL` and `OPENAI_COMPAT_MODEL`. Anthropic models use `ANTHROPIC_MODEL`. The provider model field takes precedence over `MODEL_NAME`.
 
@@ -41,7 +41,14 @@ Before saving a response, the client checks it against the input text in memory.
 
 ## App hosting
 
-I run the app locally with `streamlit run app.py`. For Streamlit Community Cloud, I select the repository, branch, and `app.py` as the entry point. I add `GROQ_API_KEY`, optional `GROQ_API_KEY2`, and, if used, `APP_PASSWORD` in app Secrets. Cloud deployment must be completed in the browser.
+I run the app locally with `streamlit run app.py`. The app is not hosted on Streamlit Community Cloud yet. To deploy it:
+
+1. Sign in at [Streamlit Community Cloud](https://share.streamlit.io/) with an account that can access the private `elprofessor-15/KukuFM` GitHub repository.
+2. Choose **Create app**, select repository `elprofessor-15/KukuFM`, branch `main`, and main file `app.py`.
+3. In the app settings, add `GROQ_API_KEY`, `GROQ_API_KEY2`, `GROQ_API_KEY3`, and `APP_PASSWORD` to Secrets. Use the same key values from the local `.env`, do not put them in GitHub files.
+4. Deploy. Streamlit will provide the live app URL in the app workspace. Test it in a private browser window. The app accepts an episode ZIP because the confidential local `data/` folder is not uploaded.
+
+This deployment needs the account owner to complete the Streamlit sign-in and GitHub authorization. I cannot complete that step from this workspace.
 
 ## Ranking and feedback
 
