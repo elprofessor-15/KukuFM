@@ -49,12 +49,29 @@
     button.addEventListener('click', async () => {
       if (!input.files.length) { status.textContent = 'Choose an episode ZIP first.'; return; }
       button.disabled = true;
-      status.textContent = 'Analyzing episodes. This can take several minutes...';
+      status.textContent = 'Uploading and validating episode ZIP...';
       results.innerHTML = '';
+      const startedAt = Date.now();
+      const progressTimer = window.setInterval(() => {
+        const elapsed = Math.floor((Date.now() - startedAt) / 1000);
+        const minutes = Math.floor(elapsed / 60);
+        const seconds = elapsed % 60;
+        if (elapsed < 20) {
+          status.textContent = `Uploading and validating episode ZIP... ${minutes}:${String(seconds).padStart(2, '0')}`;
+        } else if (elapsed < 90) {
+          status.textContent = `Parsing episodes and generating promo candidates... ${minutes}:${String(seconds).padStart(2, '0')}`;
+        } else {
+          status.textContent = `Running ranking and Groq analysis. Large uploads can take several minutes... ${minutes}:${String(seconds).padStart(2, '0')}`;
+        }
+      }, 1000);
       const form = new FormData();
       form.append('file', input.files[0]);
       try {
-        const response = await fetch(`/api/run?heuristics_only=${document.querySelector('#heuristics').checked}`, { method:'POST', body:form });
+        const controller = new AbortController();
+        const timeoutId = window.setTimeout(() => controller.abort(), 9 * 60 * 1000);
+        const response = await fetch(`/api/run?heuristics_only=${document.querySelector('#heuristics').checked}`,
+          { method:'POST', body:form, signal:controller.signal });
+        window.clearTimeout(timeoutId);
         const data = await response.json();
         if (!response.ok) throw new Error(data.error || 'Analysis failed.');
         const report = data.report || {};
@@ -70,8 +87,13 @@
         });
         if (!data.promos.length) status.textContent += ' · No validated promos found in this upload.';
       } catch (error) {
-        status.textContent = error.message;
-      } finally { button.disabled = false; }
+        status.textContent = error.name === 'AbortError'
+          ? 'Analysis exceeded the 9-minute hosting limit. Try fewer episodes or enable Fast offline analysis.'
+          : error.message;
+      } finally {
+        window.clearInterval(progressTimer);
+        button.disabled = false;
+      }
     });
     function escapeHtml(value) { const node=document.createElement('div'); node.textContent=value || ''; return node.innerHTML; }
   </script>
