@@ -1,0 +1,41 @@
+# Run report
+
+- run_id: db77d1c1-0b08-4a76-a1b3-82728c0ee437
+- model: heuristics-only
+- provider: mock
+- episodes_parsed: 50
+- files_failed: []
+- preflight_health: 98
+- candidates_generated: 300
+- candidates_pruned: 11458
+- promos_ranked: 30
+- promos_rejected: 39
+- failed_stages: []
+- tokens_input: 0
+- tokens_output: 0
+- llm_calls: 0
+- cache_hits: 0
+- retries: 0
+- estimated_cost: 0
+- unsafe_responses_omitted_from_raw: 0
+- models_used: []
+- fallback_events: []
+- api_key_fallback_events: []
+- quota_events: []
+- rate_headers: []
+- rate_limit_events: []
+- tokens_per_episode: {}
+- nudge_changed: 2
+- nudge_average_delta: 0.21
+- runtime_seconds: 15.4
+- heuristics_only: True
+- resume: False
+- observed_model_rate_limits: {"rate_limits": {"openai/gpt-oss-120b": {"request_limit": "1000", "token_limit": "8000", "retry_after_seconds": []}, "openai/gpt-oss-20b": {"request_limit": "1000", "token_limit": "8000", "retry_after_seconds": []}, "qwen/qwen3.8-27b": {"request_limit": "1000", "token_limit": "8000", "retry_after_seconds": ["51"]}}, "rate_limit_events": [{"model": "qwen/qwen3.8-27b", "status": 429, "message": "{\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` on output tokens per minute (OTPM): Limit 1000, Requested 1252. The request's expected output toke", "headers": {"x-ratelimit-limit-requests": "1000", "x-ratelimit-limit-tokens": "8000", "x-ratelimit-remaining-requests": "995", "x-ratelimit-remaining-tokens": "8000", "x-ratelimit-reset-requests": "7m12s", "x-ratelimit-reset-tokens": "1ms"}}, {"model": "qwen/qwen3.8-27b", "status": 429, "message": "{\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` on output tokens per minute (OTPM): Limit 1000, Requested 1252. The request's expected output toke", "headers": {"x-ratelimit-limit-requests": "1000", "x-ratelimit-limit-tokens": "8000", "x-ratelimit-remaining-requests": "993", "x-ratelimit-remaining-tokens": "5554", "x-ratelimit-reset-requests": "10m4.8s", "x-ratelimit-reset-tokens": "18.345s"}}, {"model": "qwen/qwen3.8-27b", "status": 429, "message": "{\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` on output tokens per minute (OTPM): Limit 1000, Used 920, Requested 914. Please try again in 50.0", "headers": {"retry-after": "51", "x-ratelimit-limit-requests": "1000", "x-ratelimit-limit-tokens": "8000", "x-ratelimit-remaining-requests": "993", "x-ratelimit-remaining-tokens": "5784", "x-ratelimit-reset-requests": "10m4.8s", "x-ratelimit-reset-tokens": "16.62s"}}]}
+- initial_live_run_id: 05d0ce2a-f092-4bec-8606-85e9a05ce5d4
+- initial_live_tokens_input: 132015
+- initial_live_tokens_output: 41799
+- initial_live_calls: 54
+- initial_live_runtime_seconds: 2840.7
+- initial_live_estimated_cost: 0.0
+- initial_live_failed_stages: ["Global rank: UnboundLocalError: cannot access local variable 'rejected' where it is not associated with a value"]
+- measured_total_tokens: 173814

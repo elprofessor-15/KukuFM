@@ -1,0 +1,20 @@
+{
+  "files_failed": [],
+  "missing_episodes": [],
+  "bad_blocks": [],
+  "malformed_blocks": [],
+  "beyond_scene": [
+    {
+      "episode": 22,
+      "block": {
+        "kind": "sound",
+        "speaker": null,
+        "raw_label": "SOUND FX",
+        "emotion": null,
+        "start": 41.5,
+        "end": 42.8
+      }
+    }
+  ],
+  "health_score": 98
+}
