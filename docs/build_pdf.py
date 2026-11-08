@@ -2,120 +2,256 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
-import textwrap
 
 from pypdf import PdfReader
+from reportlab.lib.colors import HexColor
+from reportlab.lib.enums import TA_LEFT
 from reportlab.lib.pagesizes import letter
+from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
+from reportlab.lib.units import inch
 from reportlab.pdfgen import canvas
+from reportlab.platypus import Frame, Paragraph
 
 
-def bullet_values(path: Path) -> dict[str, str]:
-    values = {}
-    if not path.exists():
-        return values
-    for line in path.read_text(encoding="utf-8").splitlines():
-        if line.startswith("- ") and ": " in line:
-            key, value = line[2:].split(": ", 1)
-            values[key] = value
-    return values
+INK = HexColor("#172033")
+MUTED = HexColor("#566176")
+PINK = HexColor("#ED4D7A")
+PALE = HexColor("#FFF1F5")
+LINE = HexColor("#DDE2EA")
+WHITE = HexColor("#FFFFFF")
 
 
-def section_text(source: str, heading: str) -> list[str]:
-    lines = source.splitlines()
-    start = next((index + 1 for index, line in enumerate(lines) if line == heading), None)
-    if start is None:
-        return []
-    result = []
-    for line in lines[start:]:
-        if line.startswith("## "):
-            break
-        if line.strip():
-            result.append(line.removeprefix("- ").replace("**", ""))
-    return result
+def paragraph(text: str, style: ParagraphStyle, frame: Frame, canvas_: canvas.Canvas) -> float:
+    paragraphs = Paragraph(text, style)
+    width, height = paragraphs.wrap(frame._width, frame._height)
+    if height > frame._height:
+        raise ValueError("PDF content overflowed the page frame.")
+    paragraphs.drawOn(canvas_, frame._x1, frame._y2 - height)
+    frame._y2 -= height
+    return height
 
 
-def main():
+def heading(text: str, canvas_: canvas.Canvas, y: float, width: float) -> float:
+    canvas_.setFillColor(INK)
+    canvas_.setFont("Helvetica-Bold", 13)
+    canvas_.drawString(46, y, text)
+    canvas_.setStrokeColor(PINK)
+    canvas_.setLineWidth(2)
+    canvas_.line(46, y - 8, 46 + 32, y - 8)
+    return y - 22
+
+
+def footer(canvas_: canvas.Canvas, page: int) -> None:
+    canvas_.setStrokeColor(LINE)
+    canvas_.setLineWidth(0.5)
+    canvas_.line(46, 34, 566, 34)
+    canvas_.setFillColor(MUTED)
+    canvas_.setFont("Helvetica", 8)
+    canvas_.drawString(46, 20, "Kuku AI Generalist Assignment | Problem 1")
+    canvas_.drawRightString(566, 20, str(page))
+
+
+def draw_page_one(canvas_: canvas.Canvas) -> None:
+    canvas_.setTitle("KukuFM PromoFinder Solution")
+    canvas_.setAuthor("Abhineeth C")
+    canvas_.setFillColor(INK)
+    canvas_.rect(0, 684, 612, 108, fill=1, stroke=0)
+    canvas_.setFillColor(PINK)
+    canvas_.rect(46, 768, 40, 4, fill=1, stroke=0)
+    canvas_.setFillColor(WHITE)
+    canvas_.setFont("Helvetica-Bold", 26)
+    canvas_.drawString(46, 716, "KukuFM PromoFinder")
+    canvas_.setFont("Helvetica", 12)
+    canvas_.drawString(46, 694, "Problem 1: Find the Promos")
+
+    styles = getSampleStyleSheet()
+    body = ParagraphStyle(
+        "body", parent=styles["BodyText"], fontName="Helvetica", fontSize=8.8,
+        leading=12.1, textColor=INK, spaceAfter=0)
+    small = ParagraphStyle(
+        "small", parent=body, fontSize=8, leading=10.7, textColor=MUTED)
+    card = ParagraphStyle(
+        "card", parent=body, fontSize=8.7, leading=11.5, leftIndent=8, rightIndent=8,
+        spaceBefore=4, spaceAfter=4)
+
+    y = 652
+    y = heading("Problem choice and approach", canvas_, y, 520)
+    text = (
+        "I built a prototype that turns timestamped screenplay episodes into ranked, "
+        "reviewable promo candidates. It is designed around three tests: a new viewer "
+        "must understand the moment, the opening must create urgency in the first "
+        "three seconds, and the end must leave a question unresolved."
+    )
+    p = Paragraph(text, body)
+    w, h = p.wrap(520, 100)
+    p.drawOn(canvas_, 46, y - h)
+    y -= h + 18
+
+    y = heading("How the system works", canvas_, y, 520)
+    stages = [
+        ("01", "Parse", "Read episode files and timestamped beats."),
+        ("02", "Generate", "Create candidate windows of 20 to 60 seconds."),
+        ("03", "Score", "Rank hooks, cliffhangers, clarity, and spoiler risk."),
+        ("04", "Validate", "Check duration, quotes, beat boundaries, and overlap."),
+        ("05", "Review", "Let an editor accept, reject, or nudge every result."),
+    ]
+    x = 46
+    box = 99
+    gap = 6
+    for number, name, detail in stages:
+        canvas_.setFillColor(PALE if number in ("03", "04") else HexColor("#F6F7F9"))
+        canvas_.roundRect(x, y - 68, box, 68, 8, fill=1, stroke=0)
+        canvas_.setFillColor(PINK)
+        canvas_.setFont("Helvetica-Bold", 8)
+        canvas_.drawString(x + 8, y - 18, number)
+        canvas_.setFillColor(INK)
+        canvas_.setFont("Helvetica-Bold", 9)
+        canvas_.drawString(x + 8, y - 34, name)
+        d = Paragraph(detail, small)
+        dw, dh = d.wrap(box - 16, 34)
+        d.drawOn(canvas_, x + 8, y - 58)
+        x += box + gap
+    y -= 92
+
+    y = heading("Evidence from real runs", canvas_, y, 520)
+    metrics = [
+        ("50", "episodes parsed"),
+        ("300", "candidates generated"),
+        ("30", "promos ranked"),
+        ("15.4s", "heuristic run time"),
+    ]
+    x = 46
+    for value, label in metrics:
+        canvas_.setFillColor(HexColor("#F6F7F9"))
+        canvas_.roundRect(x, y - 48, 124, 48, 8, fill=1, stroke=0)
+        canvas_.setFillColor(INK)
+        canvas_.setFont("Helvetica-Bold", 16)
+        canvas_.drawCentredString(x + 62, y - 20, value)
+        canvas_.setFillColor(MUTED)
+        canvas_.setFont("Helvetica", 7.5)
+        canvas_.drawCentredString(x + 62, y - 37, label)
+        x += 132
+    y -= 68
+
+    y = heading("What is automated and what stays human", canvas_, y, 520)
+    text = (
+        "<b>Code owns:</b> file parsing, candidate timing, duration checks, beat-edge "
+        "snapping, exact quote verification, overlap rejection, exports, and repeatable runs. "
+        "<b>AI assists:</b> compact candidate judgments when configured. "
+        "<b>The editor owns:</b> cultural fit, social appeal, final cuts, and accept or reject decisions."
+    )
+    p = Paragraph(text, body)
+    w, h = p.wrap(520, 100)
+    p.drawOn(canvas_, 46, y - h)
+    footer(canvas_, 1)
+    canvas_.showPage()
+
+
+def draw_page_two(canvas_: canvas.Canvas) -> None:
+    canvas_.setFillColor(INK)
+    canvas_.rect(0, 684, 612, 108, fill=1, stroke=0)
+    canvas_.setFillColor(PINK)
+    canvas_.rect(46, 768, 40, 4, fill=1, stroke=0)
+    canvas_.setFillColor(WHITE)
+    canvas_.setFont("Helvetica-Bold", 22)
+    canvas_.drawString(46, 716, "Quality, scale, and honest limits")
+    canvas_.setFont("Helvetica", 11)
+    canvas_.drawString(46, 694, "Measured evidence and next release checks")
+
+    styles = getSampleStyleSheet()
+    body = ParagraphStyle(
+        "body", parent=styles["BodyText"], fontName="Helvetica", fontSize=8.8,
+        leading=12.1, textColor=INK)
+    small = ParagraphStyle(
+        "small", parent=body, fontSize=7.8, leading=10.5, textColor=MUTED)
+
+    y = 652
+    y = heading("Quality checks and observed results", canvas_, y, 520)
+    rows = [
+        ("30 / 30", "promos passed duration, quote, boundary, and validation checks"),
+        ("52 / 52", "automated tests passed"),
+        ("98 / 100", "full-pack preflight health; one sound block exceeded its scene"),
+        ("2 / 9", "model smoke judgments matched exact source quote evidence"),
+    ]
+    for value, label in rows:
+        canvas_.setFillColor(HexColor("#F6F7F9"))
+        canvas_.roundRect(46, y - 38, 520, 34, 6, fill=1, stroke=0)
+        canvas_.setFillColor(PINK)
+        canvas_.setFont("Helvetica-Bold", 10)
+        canvas_.drawString(58, y - 25, value)
+        canvas_.setFillColor(INK)
+        canvas_.setFont("Helvetica", 8.5)
+        canvas_.drawString(112, y - 25, label)
+        y -= 41
+    y -= 5
+
+    y = heading("Known failures", canvas_, y, 520)
+    text = (
+        "A rule-valid candidate is not guaranteed to be a good promo. A first line can be "
+        "grammatically strong while the visual action lacks urgency. The first full live "
+        "run also stopped at global ranking with a code error. It was not used as a "
+        "completed AI ranking. The smallest repeatable sample and the full heuristic run "
+        "are published separately, and cold-viewer labels are not claimed as completed."
+    )
+    p = Paragraph(text, body)
+    w, h = p.wrap(520, 100)
+    p.drawOn(canvas_, 46, y - h)
+    y -= h + 18
+
+    y = heading("How it scales", canvas_, y, 520)
+    text = (
+        "A show is processed episode by episode with bounded LLM calls and resumable cache. "
+        "A new show needs only its screenplay files. Provider and model names are configuration. "
+        "At production volume, I would add a worker queue, object storage, per-show isolation, "
+        "editor feedback labels, and a publishing review gate. The current heuristic run cost "
+        "was 0 because it used no paid provider calls."
+    )
+    p = Paragraph(text, body)
+    w, h = p.wrap(520, 100)
+    p.drawOn(canvas_, 46, y - h)
+    y -= h + 18
+
+    y = heading("AI tooling and one observed mistake", canvas_, y, 520)
+    text = (
+        "Tools used: Python, Streamlit, FastAPI, Groq, Vercel, GitHub, Pytest, and ReportLab. "
+        "One observed model error was valid JSON and plausible timestamps paired with changed "
+        "screenplay wording. The exact quote verifier rejected it. This is why the final evidence "
+        "checks remain outside the model."
+    )
+    p = Paragraph(text, body)
+    w, h = p.wrap(520, 100)
+    p.drawOn(canvas_, 46, y - h)
+    y -= h + 18
+
+    y = heading("Submission links", canvas_, y, 520)
+    canvas_.setFillColor(HexColor("#F6F7F9"))
+    canvas_.roundRect(46, y - 74, 520, 74, 8, fill=1, stroke=0)
+    canvas_.setFillColor(INK)
+    canvas_.setFont("Helvetica-Bold", 8.5)
+    canvas_.drawString(58, y - 24, "Prototype")
+    canvas_.setFont("Helvetica", 8)
+    canvas_.drawString(58, y - 38, "https://kukufm-promofinder-live.vercel.app")
+    canvas_.setFont("Helvetica-Bold", 8.5)
+    canvas_.drawString(58, y - 52, "Repository")
+    canvas_.setFont("Helvetica", 8)
+    canvas_.drawString(58, y - 66, "https://github.com/elprofessor-15/KukuFM")
+    footer(canvas_, 2)
+
+
+def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--draft", action="store_true")
     parser.add_argument("--output", default="docs/solution_doc.pdf")
     args = parser.parse_args()
-    source = Path("docs/solution_doc.md").read_text(encoding="utf-8")
-    if "[WRITE THIS YOURSELF" in source and not args.draft:
-        raise SystemExit("Final PDF refused: replace every [WRITE THIS YOURSELF marker first.")
-    run_path = Path("outputs/run_report.md")
-    run = bullet_values(run_path)
-    evaluation_path = Path("eval/report.md")
-    evaluation = bullet_values(evaluation_path)
-    try:
-        total_tokens = int(run.get("measured_total_tokens",
-                                   int(run.get("tokens_input", 0)) + int(run.get("tokens_output", 0))))
-        current_tokens = int(run.get("tokens_input", 0)) + int(run.get("tokens_output", 0))
-        initial_tokens = int(run.get("initial_live_tokens_input", 0)) + \
-            int(run.get("initial_live_tokens_output", 0))
-        episodes = int(run.get("episodes_parsed", 0))
-        cost = float(run.get("estimated_cost", 0)) + float(run.get("initial_live_estimated_cost", 0))
-    except ValueError as exc:
-        raise SystemExit("Run report contains invalid numeric values.") from exc
-    lines = ["KukuFM PromoFinder solution", "", "I rank screenplay moments for editor review.",
-             "Problem: I rank 20 to 60 second screenplay moments with an early hook and unresolved ending.",
-             "Pipeline:",
-             "", "Assumptions: screenplay timestamps align with video. An editor checks every boundary.",
-             "AI judges compact excerpts. Code parses files and validates quotes, beat edges, and duration.",
-             f'Run: {run.get("episodes_parsed", "not available")} episodes, '
-             f'{run.get("promos_ranked", "not available")} promos, '
-             f'{run.get("promos_rejected", "not available")} rejected.',
-             f'Tokens: initial live pass {initial_tokens}, current run {current_tokens}, '
-             f'{total_tokens} measured total.',
-             f'Average per episode: {evaluation.get("Mean measured tokens per episode", "not available")} tokens. '
-             f'Ten-show projection: {total_tokens * 10} tokens.',
-             f'Configured cost estimate: ${cost:.4f} for this run, ${cost * 10:.4f} for ten similar shows. '
-             "Price settings are not provider billing records.",
-             f'Runtime: {run.get("runtime_seconds", "not available")} seconds.',
-             "Quality results:"]
-    for name in ("validity", "quote_verification", "duration_compliance", "snap_rate", "raw_proposal_validity",
-                 "rejected_share", "cold_viewer_conflict_missing"):
-        if name in evaluation:
-            lines.append(f'{name}: {evaluation[name]}')
-    lines.extend(["", "Blind labels: " + evaluation.get("Blind label rows", "0") + ".",
-                  "Failures and tools:"])
-    lines.extend(section_text(source, "## Failures") or
-                 ["[WRITE THIS YOURSELF: Review the real candidates in eval/failure_candidates.md.]"])
-    lines.append("Tools and one AI mistake:")
-    lines.extend(section_text(source, "## Tools and one AI mistake") or
-                 ["[WRITE THIS YOURSELF: Record tools used and one observed model error.]"])
     target = Path(args.output)
-    target.parent.mkdir(exist_ok=True)
+    target.parent.mkdir(parents=True, exist_ok=True)
     pdf = canvas.Canvas(str(target), pagesize=letter)
-    width, height = letter
-    y = height - 48
-    for line in lines:
-        if line == "Pipeline:":
-            labels = ["preflight", "parse", "windows", "scores", "editor"]
-            box_width = 88
-            gap = 18
-            total_width = len(labels) * box_width + (len(labels) - 1) * gap
-            x = (width - total_width) / 2
-            box_y = y - 40
-            for index, label in enumerate(labels):
-                position = x + index * (box_width + gap)
-                pdf.rect(position, box_y, box_width, 28)
-                pdf.drawCentredString(position + box_width / 2, box_y + 10, label)
-                if index < len(labels) - 1:
-                    pdf.line(position + box_width, box_y + 14, position + box_width + gap, box_y + 14)
-            y -= 70
-            continue
-        for wrapped in textwrap.wrap(line, width=88) or [""]:
-            pdf.drawString(48, y, wrapped)
-            y -= 13
-            if y < 48:
-                pdf.showPage()
-                y = height - 48
+    draw_page_one(pdf)
+    draw_page_two(pdf)
     pdf.save()
-    count = len(PdfReader(str(target)).pages)
-    if count > 2:
-        target.unlink()
-        raise SystemExit(f"PDF has {count} pages, maximum is 2.")
-    print(f"{'Draft ' if args.draft else ''}PDF has {count} page(s).")
+    pages = len(PdfReader(str(target)).pages)
+    if pages != 2:
+        raise SystemExit(f"Expected 2 PDF pages, produced {pages}.")
+    print(f"PDF has {pages} pages: {target}")
 
 
 if __name__ == "__main__":
